@@ -4,7 +4,12 @@
 
 La solution : votre programme est désormais une **PWA** (web-app installable). Sur iPhone, on l'ajoute à l'écran d'accueil depuis Safari : elle s'ouvre **en plein écran, comme une app, et fonctionne hors-ligne**.
 
-Il faut **2 étapes** : (1) mettre le dossier en ligne une seule fois, (2) l'ajouter à l'écran d'accueil de l'iPhone.
+> ✅ **C'est déjà en ligne** (déployé sur GitHub Pages) :
+>
+> # 👉 https://etndebrem.github.io/mes-revisions/
+>
+> Il ne reste qu'à l'**ajouter à l'écran d'accueil de l'iPhone** → voir **l'Étape 2** ci-dessous.
+> *(L'Étape 1, la mise en ligne, est déjà faite — conservée plus bas pour référence et pour les mises à jour.)*
 
 ---
 
