@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Révisions — Histoire du droit des obligations (C. Drand)</title>
+<link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#003399">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="../index.html" style="display:inline-block;color:#fff;opacity:.8;text-decoration:none;font-size:.84rem;margin-bottom:6px">← Mes révisions</a>
+    <h1>Histoire du droit des obligations</h1>
+    <p>Répertoire &amp; flashcards — cours de Céline Drand (L2) · auteurs · notions · textes · adages</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <nav class="tabs">
+    <button data-tab="repertoire" class="active">📚 Répertoire</button>
+    <button data-tab="flashcards">🎴 Flashcards</button>
+    <button id="reset-progress" class="" style="margin-left:auto" title="Effacer la progression sauvegardée">♻️ Réinitialiser la progression</button>
+  </nav>
+
+  <div id="statsbar" class="statsbar"></div>
+
+  <!-- ===== VUE RÉPERTOIRE ===== -->
+  <section id="view-repertoire">
+    <div id="rep-controls" class="controls"></div>
+    <p id="rep-count" class="count"></p>
+    <div id="rep-list" class="list"></div>
+  </section>
+
+  <!-- ===== VUE FLASHCARDS ===== -->
+  <section id="view-flashcards" style="display:none">
+    <div id="fc-controls" class="fc-setup"></div>
+
+    <div id="fc-stage" class="fc-stage">
+      <div id="fc-progress" class="fc-progress"></div>
+      <div id="fc-card" class="card"></div>
+      <div id="fc-actions" class="fc-actions">
+        <button class="ko">❌ À revoir <span class="kbd">1 ◀</span></button>
+        <button class="ok">✅ Je savais <span class="kbd">▶ 2</span></button>
+      </div>
+    </div>
+
+    <div id="fc-done" class="fc-done"></div>
+  </section>
+
+  <footer>
+    Outil de révision personnel · données extraites de vos notes Obsidian (histoire du droit des obligations) · progression stockée localement dans ce navigateur.
+  </footer>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('../sw.js').catch(function(){});});}</script>
+</body>
+</html>
