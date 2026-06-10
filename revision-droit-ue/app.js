@@ -4,8 +4,8 @@
 
   var DATA = (window.REPERTOIRE || []).slice();
   var STORE_KEY = "droitue_leitner_v1";
-  var TYPE_LABEL = { art: "Article / texte", tr: "Traité / étape", jur: "Jurisprudence" };
-  var TYPE_SHORT = { art: "Article", tr: "Traité", jur: "Jurisprudence" };
+  var TYPE_LABEL = { concept: "Notion / Concept", art: "Article / texte", tr: "Traité / étape", jur: "Jurisprudence" };
+  var TYPE_SHORT = { concept: "Notion", art: "Article", tr: "Traité", jur: "Jurisprudence" };
 
   /* --- identifiants stables + chargement progression --- */
   function slug(s) {
@@ -46,7 +46,7 @@
     if (ia < 0) ia = 999; if (ib < 0) ib = 999;
     return (ia - ib) || a.localeCompare(b, "fr");
   });
-  var TYPES = ["art", "tr", "jur"];
+  var TYPES = ["concept", "art", "tr", "jur"];
 
   /* --- état --- */
   var state = {
