@@ -6,16 +6,18 @@ Outil de révision personnel basé sur le cours de **Céline Drand** (L2), gén�
 
 Depuis la page d'accueil **`../index.html`** (Mes révisions), ou **double-cliquez sur `index.html`**. Aucune installation, aucun serveur, hors ligne.
 
-## Deux modes
+## Trois modes
 
 - **📚 Répertoire** — la liste des **auteurs/juristes, notions, textes (sources & articles) et adages** du cours, avec leur signification. Filtrez par **type**, par **chapitre**, ou cherchez un mot-clé.
 - **🎴 Flashcards** — révisez par cartes, chapitre par chapitre, avec **répétition espacée (Leitner)**. Choisissez le sens (Référence → Sens, Sens → Référence, ou Mixte).
+- **📝 QCM** — un QCM **type annale** (50 questions / 1 h), avec ~150 questions calquées sur trois annales : **janvier 2019**, **rattrapage 2018-19** et **janvier 2023**. Deux barèmes au choix : **2023** (+1 / −0,5 / sans réponse 0) ou **2019** (sans réponse = −0,5 aussi). Mode **Examen** (corrigé expliqué à la fin, chronomètre optionnel de 1,2 min/question) ou **Entraînement** (correction immédiate). Les questions effectivement posées à une annale portent un badge « 📜 annale … ». Vos erreurs sont mémorisées : option « uniquement les questions déjà ratées » et bouton « Retravailler les erreurs ».
 
-La progression est sauvegardée automatiquement (`localStorage`, clé `histdroit_leitner_v1` — indépendante des autres matières).
+La progression est sauvegardée automatiquement (`localStorage`, clés `histdroit_leitner_v1` et `histdroit_qcm_v1` — indépendantes des autres matières).
 
 ### Raccourcis clavier (en session)
 
-- `Espace` / `Entrée` : révéler &nbsp;·&nbsp; `2` ou `→` : je savais &nbsp;·&nbsp; `1` ou `←` : à revoir
+- Flashcards : `Espace` / `Entrée` : révéler &nbsp;·&nbsp; `2` ou `→` : je savais &nbsp;·&nbsp; `1` ou `←` : à revoir
+- QCM : `A`/`B`/`C` (ou `1`/`2`/`3`) : répondre &nbsp;·&nbsp; `0` ou `P` : passer &nbsp;·&nbsp; `Entrée` : question suivante
 
 ## Les 12 chapitres
 
@@ -34,3 +36,16 @@ Ouvrez **`data.js`** et ajoutez une ligne sur le modèle des autres :
 - `r` : la référence (recto) · `m` : la signification (verso)
 
 Enregistrez, puis rechargez `index.html`.
+
+## Ajouter ou corriger une question de QCM
+
+Ouvrez **`qcm-data.js`** et ajoutez une entrée sur le modèle des autres :
+
+```js
+{th:"La formation des contrats", q:`À l'époque du droit romain, … :`,
+ o:[`option 1`,`option 2`,`option 3`], a:0,
+ e:`Explication affichée au corrigé.`},
+```
+
+- `th` : un des 4 chapitres de `window.QCM_THEMES` · `q` : l'énoncé · `o` : 2 ou 3 options · `a` : index (0/1/2) de la bonne réponse · `e` : l'explication
+- `f:1` (facultatif) : fige l'ordre des options (énumérations, chronologies) · `an:1` (facultatif) : badge « annale 2023 »

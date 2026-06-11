@@ -326,8 +326,11 @@
     $$("nav.tabs button").forEach(function (b) { b.classList.toggle("active", b.getAttribute("data-tab") === tab); });
     $("#view-repertoire").style.display = tab === "repertoire" ? "block" : "none";
     $("#view-flashcards").style.display = tab === "flashcards" ? "block" : "none";
+    $("#view-qcm").style.display = tab === "qcm" ? "block" : "none";
+    if (tab !== "qcm" && window.QCM_VIEW) window.QCM_VIEW.leave();
     if (tab === "repertoire") { renderControls(); renderList(); }
-    else { backToSetup(); }
+    else if (tab === "flashcards") { backToSetup(); }
+    else if (tab === "qcm" && window.QCM_VIEW) { window.QCM_VIEW.enter(); }
     renderStats();
   }
 
