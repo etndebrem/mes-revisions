@@ -45,7 +45,8 @@
   var stats = loadStats();
 
   /* --- réglages de session --- */
-  var setup = { themes: {}, count: 50, mode: "examen", chrono: true, onlyMissed: false, bareme: "simple" };
+  var setup = { themes: {}, count: 50, mode: "examen", chrono: true, onlyMissed: false, onlyAnnale: false, bareme: "simple" };
+  var N_ANNALE = BANK.filter(function (q) { return q.an; }).length;
   function koPenalty() { return setup.bareme === "negatif" ? 0.5 : 0; }
   var run = null;
 
@@ -55,6 +56,7 @@
     var tk = activeThemes();
     var missed = setup.onlyMissed ? missedIds() : null;
     return BANK.filter(function (q) {
+      if (setup.onlyAnnale && !q.an) return false;
       if (tk.length && tk.indexOf(q.th) < 0) return false;
       if (missed && missed.indexOf(q.id) < 0) return false;
       return true;
@@ -75,7 +77,7 @@
     }).join("");
     var counts = [10, 20, 50, 0];
     var countBtns = counts.map(function (n) {
-      var label = n === 0 ? "Toutes" : (n === 50 ? "50 (annale)" : String(n));
+      var label = n === 0 ? "Toutes" : String(n);
       return '<button data-count="' + n + '" class="' + (setup.count === n ? "on" : "") + '">' + label + '</button>';
     }).join("");
     var nMissed = missedIds().length;
@@ -100,6 +102,7 @@
             '<button data-bareme="simple" class="' + (setup.bareme === "simple" ? "on" : "") + '">Sans pénalité (+1 / 0 / 0)</button>' +
             '<button data-bareme="negatif" class="' + (setup.bareme === "negatif" ? "on" : "") + '">Avec pénalité (+1 / −0,5 / 0)</button>' +
           '</div></div>' +
+        '<label class="opt opt-annale"><input type="checkbox" id="qcm-annale"' + (setup.onlyAnnale ? " checked" : "") + '> 📜 Seulement les questions de l\'annale (' + N_ANNALE + ')</label>' +
         '<label class="opt" id="qcm-chrono-row"><input type="checkbox" id="qcm-chrono"' + (setup.chrono ? " checked" : "") + '> Chronomètre (1,2 min par question)</label>' +
         (nMissed > 0
           ? '<label class="opt"><input type="checkbox" id="qcm-missed"' + (setup.onlyMissed ? " checked" : "") + '> Uniquement les questions déjà ratées (' + nMissed + ')</label>'
@@ -138,6 +141,7 @@
     });
     $("#qcm-chrono-row").style.display = setup.mode === "examen" ? "flex" : "none";
     $("#qcm-chrono").addEventListener("change", function () { setup.chrono = this.checked; });
+    $("#qcm-annale").addEventListener("change", function () { setup.onlyAnnale = this.checked; updateN(); });
     var missedCb = $("#qcm-missed");
     if (missedCb) missedCb.addEventListener("change", function () { setup.onlyMissed = this.checked; updateN(); });
     $("#qcm-start").addEventListener("click", function () { startRun(); });

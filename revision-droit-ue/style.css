@@ -142,6 +142,8 @@ input[type=search]:focus{border-color:var(--eu-blue-2); box-shadow:0 0 0 3px rgb
 
 /* ===== QCM ===== */
 .qcm-intro{font-size:.9rem; color:var(--muted); margin:0 0 14px; line-height:1.6}
+.opt-annale{background:#fff8e6; border:1px solid #ffe7a3; border-radius:10px; padding:9px 12px; color:#8a6400; font-weight:600}
+.opt-annale input{accent-color:#caa000}
 .qcm-stage{display:none}
 .qcm-card{cursor:default; align-items:stretch; text-align:left; justify-content:flex-start; padding:24px 26px; min-height:auto}
 .qcm-card:hover{border-color:var(--line)}
