@@ -1,6 +1,6 @@
-/* ===== Révisions Droit institutionnel de l'UE — style ===== */
+/* ===== Révisions Droit commercial — style (thème « commerce » vert) ===== */
 :root{
-  --eu-blue:#003399; --eu-blue-2:#2b50b4; --gold:#ffcc00;
+  --eu-blue:#0f7a44; --eu-blue-2:#15a05a; --gold:#ffcc00;
   --bg:#eef1f8; --card:#ffffff; --ink:#161d2b; --muted:#5b6577;
   --line:#e2e7f0; --line-2:#d3dae8;
   --art:#1d4ed8; --art-bg:#e8efff;
@@ -25,7 +25,7 @@ header.top{
   background:linear-gradient(135deg,var(--eu-blue),var(--eu-blue-2));
   color:#fff; padding:26px 0 22px; box-shadow:var(--shadow); position:relative; overflow:hidden;
 }
-header.top::after{content:"★★★"; position:absolute; right:18px; top:14px; letter-spacing:6px; color:var(--gold); opacity:.85; font-size:14px}
+header.top::after{content:"§ § §"; position:absolute; right:18px; top:14px; letter-spacing:4px; color:var(--gold); opacity:.85; font-size:14px}
 header.top .wrap{padding-bottom:0}
 header.top h1{margin:0; font-size:1.5rem; font-weight:700; letter-spacing:.2px}
 header.top p{margin:.3rem 0 0; opacity:.9; font-size:.92rem}
@@ -55,7 +55,7 @@ input[type=search]{
   flex:1; min-width:200px; padding:11px 14px; border:1px solid var(--line-2); border-radius:10px;
   font-size:.95rem; outline:none; background:#fbfcff;
 }
-input[type=search]:focus{border-color:var(--eu-blue-2); box-shadow:0 0 0 3px rgba(43,80,180,.12)}
+input[type=search]:focus{border-color:var(--eu-blue-2); box-shadow:0 0 0 3px rgba(21,160,90,.14)}
 .filterlabel{font-size:.78rem; text-transform:uppercase; letter-spacing:.5px; color:var(--muted); margin-right:2px; font-weight:700}
 .chipset{display:flex; gap:7px; flex-wrap:wrap}
 .fchip{
@@ -139,55 +139,4 @@ input[type=search]:focus{border-color:var(--eu-blue-2); box-shadow:0 0 0 3px rgb
 .fc-done .big-num{font-size:2.4rem; font-weight:800; color:var(--eu-blue)}
 .fc-done .done-actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:18px}
 .hidden{display:none!important}
-
-/* ===== QCM ===== */
-.qcm-intro{font-size:.9rem; color:var(--muted); margin:0 0 14px; line-height:1.6}
-.qcm-stage{display:none}
-.qcm-card{cursor:default; align-items:stretch; text-align:left; justify-content:flex-start; padding:24px 26px; min-height:auto}
-.qcm-card:hover{border-color:var(--line)}
-.qcm-badges{display:flex; gap:6px; margin-bottom:12px; flex-wrap:wrap}
-.badge.annale{background:#fff4d6; color:#8a6400}
-.badge.multi{background:#e8efff; color:var(--eu-blue)}
-.qcm-question{font-size:1.18rem; font-weight:700; line-height:1.4}
-.qcm-options{display:flex; flex-direction:column; gap:10px; margin-top:18px}
-.qcm-opt{
-  display:flex; align-items:flex-start; gap:12px; width:100%; text-align:left;
-  padding:13px 15px; border:1.5px solid var(--line-2); border-radius:12px;
-  background:#fbfcff; cursor:pointer; font-size:.95rem; color:var(--ink); transition:.12s;
-}
-.qcm-opt:hover:not(:disabled){border-color:var(--eu-blue-2); background:#f0f4ff}
-.qcm-opt .box{
-  flex:0 0 auto; width:26px; height:26px; border:1.5px solid var(--line-2); border-radius:7px;
-  display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.8rem;
-  color:var(--muted); background:#fff; transition:.12s;
-}
-.qcm-opt .otext{padding-top:2px}
-.qcm-opt.sel{border-color:var(--eu-blue); background:#eaf0ff}
-.qcm-opt.sel .box{background:var(--eu-blue); color:#fff; border-color:var(--eu-blue)}
-.qcm-opt:disabled{cursor:default}
-.qcm-opt.good{border-color:var(--ok); background:var(--ok-bg)}
-.qcm-opt.good .box{background:var(--ok); color:#fff; border-color:var(--ok)}
-.qcm-opt.bad{border-color:var(--ko); background:var(--ko-bg)}
-.qcm-opt.bad .box{background:var(--ko); color:#fff; border-color:var(--ko)}
-.qcm-opt.missed{border-color:var(--ok); background:#fff}
-.qcm-opt.missed .box{border-color:var(--ok); color:var(--ok); box-shadow:inset 0 0 0 1.5px var(--ok)}
-.qcm-expl{margin-top:16px; padding:12px 14px; background:#f6f8fd; border-left:4px solid var(--eu-blue); border-radius:8px; font-size:.92rem; color:#2d3647}
-.qcm-foot{display:flex; gap:10px; margin-top:14px; justify-content:space-between; align-items:center; flex-wrap:wrap}
-.qcm-hint{font-size:.82rem; color:var(--muted)}
-.qcm-timer{font-variant-numeric:tabular-nums; font-weight:800; color:var(--ink)}
-.qcm-timer.low{color:var(--ko)}
-.qcm-review{text-align:left; margin-top:26px; border-top:1px solid var(--line); padding-top:14px}
-.qcm-review h4{margin:0 0 12px; font-size:1.05rem}
-.review-item{border:1px solid var(--line); border-left:4px solid var(--line-2); border-radius:10px; padding:12px 14px; margin-bottom:10px; background:#fbfcff}
-.review-item.good{border-left-color:var(--ok)}
-.review-item.bad{border-left-color:var(--ko)}
-.review-item.skip{border-left-color:var(--gold)}
-.review-q{font-size:.95rem}
-.review-q .badge.annale{font-size:.66rem; padding:2px 7px}
-.review-a{font-size:.88rem; margin-top:6px}
-.review-item.good .review-a{color:var(--ok)}
-.review-item.bad .review-a{color:var(--ko)}
-.review-item.skip .review-a{color:#8a6400}
-.review-e{font-size:.85rem; color:var(--muted); margin-top:6px}
-
 footer{ text-align:center; color:var(--muted); font-size:.8rem; margin-top:28px }

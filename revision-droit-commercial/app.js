@@ -1,11 +1,11 @@
-/* ===== Révisions Droit institutionnel de l'UE — logique ===== */
+/* ===== Révisions Droit commercial — logique ===== */
 (function () {
   "use strict";
 
   var DATA = (window.REPERTOIRE || []).slice();
-  var STORE_KEY = "droitue_leitner_v1";
-  var TYPE_LABEL = { concept: "Notion / Concept", art: "Article / texte", tr: "Traité / étape", jur: "Jurisprudence" };
-  var TYPE_SHORT = { concept: "Notion", art: "Article", tr: "Traité", jur: "Jurisprudence" };
+  var STORE_KEY = "droitco_leitner_v1";
+  var TYPE_LABEL = { concept: "Notion / Concept", art: "Article / texte", tr: "Loi / réforme", jur: "Jurisprudence" };
+  var TYPE_SHORT = { concept: "Notion", art: "Article", tr: "Loi/réforme", jur: "Arrêt" };
 
   /* --- identifiants stables + chargement progression --- */
   function slug(s) {
@@ -326,11 +326,8 @@
     $$("nav.tabs button").forEach(function (b) { b.classList.toggle("active", b.getAttribute("data-tab") === tab); });
     $("#view-repertoire").style.display = tab === "repertoire" ? "block" : "none";
     $("#view-flashcards").style.display = tab === "flashcards" ? "block" : "none";
-    $("#view-qcm").style.display = tab === "qcm" ? "block" : "none";
-    if (tab !== "qcm" && window.QCM_VIEW) window.QCM_VIEW.leave();
     if (tab === "repertoire") { renderControls(); renderList(); }
-    else if (tab === "qcm" && window.QCM_VIEW) { window.QCM_VIEW.enter(); }
-    else if (tab === "flashcards") { backToSetup(); }
+    else { backToSetup(); }
     renderStats();
   }
 

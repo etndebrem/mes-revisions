@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Révisions — Droit institutionnel de l'UE (A. Husser)</title>
+<title>Révisions — Droit commercial (T. de Ravel d'Esclapon)</title>
 <link rel="stylesheet" href="style.css">
-<meta name="theme-color" content="#003399">
+<meta name="theme-color" content="#0f7a44">
 <link rel="manifest" href="../manifest.webmanifest">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -16,8 +16,8 @@
 <header class="top">
   <div class="wrap">
     <a href="../index.html" style="display:inline-block;color:#fff;opacity:.8;text-decoration:none;font-size:.84rem;margin-bottom:6px">← Mes révisions</a>
-    <h1>Droit institutionnel de l'Union européenne</h1>
-    <p>Répertoire &amp; flashcards — cours d'Alexis Husser (L2) · articles · traités · jurisprudence</p>
+    <h1>Droit commercial</h1>
+    <p>Répertoire &amp; flashcards — cours de M. de Ravel d'Esclapon (L2) · articles · lois &amp; réformes · jurisprudence · notions</p>
   </div>
 </header>
 
@@ -26,7 +26,6 @@
   <nav class="tabs">
     <button data-tab="repertoire" class="active">📚 Répertoire</button>
     <button data-tab="flashcards">🎴 Flashcards</button>
-    <button data-tab="qcm">📝 QCM</button>
     <button id="reset-progress" class="" style="margin-left:auto" title="Effacer la progression sauvegardée">♻️ Réinitialiser la progression</button>
   </nav>
 
@@ -55,22 +54,13 @@
     <div id="fc-done" class="fc-done"></div>
   </section>
 
-  <!-- ===== VUE QCM ===== -->
-  <section id="view-qcm" style="display:none">
-    <div id="qcm-setup" class="fc-setup"></div>
-    <div id="qcm-stage" class="qcm-stage" style="display:none"></div>
-    <div id="qcm-done" class="fc-done"></div>
-  </section>
-
   <footer>
-    Outil de révision personnel · données extraites de vos notes Obsidian · progression stockée localement dans ce navigateur.
+    Outil de révision personnel · données tirées des corrigés &amp; de vos notes Obsidian de droit commercial · progression stockée localement dans ce navigateur.
   </footer>
 </div>
 
 <script src="data.js"></script>
-<script src="qcm-data.js"></script>
 <script src="app.js"></script>
-<script src="qcm.js"></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('../sw.js').catch(function(){});});}</script>
 </body>
 </html>

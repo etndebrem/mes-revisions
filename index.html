@@ -15,6 +15,7 @@
     --eu-blue:#003399; --eu-blue-2:#2b50b4; --gold:#ffcc00;
     --uk-red:#8b1e2d; --uk-red-2:#b8323f;
     --hist:#92400e; --hist-2:#b45309;
+    --co:#0f7a44;
     --bg:#eef1f8; --card:#fff; --ink:#161d2b; --muted:#5b6577; --line:#e2e7f0;
     --shadow:0 1px 2px rgba(20,30,60,.06),0 6px 20px rgba(20,30,60,.08);
   }
@@ -46,11 +47,13 @@
   a.course:hover{transform:translateY(-3px); box-shadow:0 4px 10px rgba(20,30,60,.10),0 16px 34px rgba(20,30,60,.13)}
   a.course.uk{border-top-color:var(--uk-red)}
   a.course.hist{border-top-color:var(--hist)}
+  a.course.co{border-top-color:var(--co)}
   .course .flag{font-size:2.4rem; line-height:1}
   .course .tag{display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.4px; text-transform:uppercase;
     padding:3px 10px; border-radius:999px; background:#e8efff; color:var(--eu-blue); margin:12px 0 6px}
   a.course.uk .tag{background:#f7e7e9; color:var(--uk-red)}
   a.course.hist .tag{background:#f6ecdf; color:var(--hist)}
+  a.course.co .tag{background:#e6f5ec; color:var(--co)}
   .course h2{margin:.1rem 0 .2rem; font-size:1.22rem; line-height:1.25}
   .course .prof{font-size:.86rem; color:var(--muted); margin:0 0 12px}
   .course .desc{font-size:.92rem; color:#2d3647; margin:0 0 16px}
@@ -60,6 +63,7 @@
   .course .cta{font-weight:700; color:var(--eu-blue); font-size:.95rem}
   a.course.uk .cta{color:var(--uk-red)}
   a.course.hist .cta{color:var(--hist)}
+  a.course.co .cta{color:var(--co)}
   .course .cta::after{content:" →"}
 
   footer{text-align:center; color:var(--muted); font-size:.8rem; margin-top:34px}
@@ -78,6 +82,20 @@
   <p class="lead">Choisissez une matière pour ouvrir son répertoire de références et ses flashcards. Chaque matière garde sa propre progression.</p>
 
   <div class="grid">
+
+    <a class="course co" href="revision-droit-commercial/index.html">
+      <div class="flag">🏪</div>
+      <span class="tag">Droit commercial</span>
+      <h2>Droit commercial général</h2>
+      <p class="prof">Cours de M. de Ravel d'Esclapon</p>
+      <p class="desc">Articles (Code de commerce), lois &amp; réformes, jurisprudence &amp; notions : actes de commerce, commerçant, fonds de commerce, baux commerciaux.</p>
+      <div class="stats">
+        <span class="chip"><b>88</b> fiches</span>
+        <span class="chip"><b>8</b> chapitres</span>
+        <span class="chip">🇫🇷 Français</span>
+      </div>
+      <span class="cta">Réviser</span>
+    </a>
 
     <a class="course eu" href="revision-droit-ue/index.html">
       <div class="flag">🇪🇺</div>

@@ -1,6 +1,6 @@
 /* Service worker — met l'appli en cache pour un fonctionnement hors-ligne.
    Incrémentez la version (CACHE) après toute modification des fichiers. */
-const CACHE = 'revisions-v4';
+const CACHE = 'revisions-v6';
 
 const ASSETS = [
   './',
@@ -9,10 +9,16 @@ const ASSETS = [
   './icon-192.png',
   './icon-512.png',
   './apple-touch-icon.png',
+  './revision-droit-commercial/index.html',
+  './revision-droit-commercial/style.css',
+  './revision-droit-commercial/app.js',
+  './revision-droit-commercial/data.js',
   './revision-droit-ue/index.html',
   './revision-droit-ue/style.css',
   './revision-droit-ue/app.js',
   './revision-droit-ue/data.js',
+  './revision-droit-ue/qcm-data.js',
+  './revision-droit-ue/qcm.js',
   './revision-anglais-uk/index.html',
   './revision-anglais-uk/style.css',
   './revision-anglais-uk/app.js',
