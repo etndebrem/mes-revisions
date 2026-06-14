@@ -1,6 +1,6 @@
 /* Service worker — met l'appli en cache pour un fonctionnement hors-ligne.
    Incrémentez la version (CACHE) après toute modification des fichiers. */
-const CACHE = 'revisions-v8';
+const CACHE = 'revisions-v9';
 
 const ASSETS = [
   './',
@@ -23,6 +23,7 @@ const ASSETS = [
   './revision-anglais-uk/style.css',
   './revision-anglais-uk/app.js',
   './revision-anglais-uk/data.js',
+  './revision-anglais-uk/fiches.js',
   './revision-histoire-droit/index.html',
   './revision-histoire-droit/style.css',
   './revision-histoire-droit/app.js',
