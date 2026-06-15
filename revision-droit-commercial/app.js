@@ -3,6 +3,8 @@
   "use strict";
 
   var DATA = (window.REPERTOIRE || []).slice();
+  var FICHES = (window.FICHES || []);
+  var FICHE_PARTS = window.FICHE_PARTS || [];
   var STORE_KEY = "droitco_leitner_v1";
   var TYPE_LABEL = { concept: "Notion / Concept", art: "Article / texte", tr: "Loi / réforme", jur: "Jurisprudence" };
   var TYPE_SHORT = { concept: "Notion", art: "Article", tr: "Loi/réforme", jur: "Arrêt" };
@@ -70,6 +72,12 @@
     return String(s).replace(/[&<>"]/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
     });
+  }
+  // mini-formatage des fiches : **gras** et *italique*
+  function fmt(s) {
+    return esc(s)
+      .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+      .replace(/\*([^*]+)\*/g, "<em>$1</em>");
   }
 
   /* --- filtrage commun --- */
@@ -320,13 +328,113 @@
     renderFcSetup();
   }
 
+  /* ============ FICHES DE SYNTHÈSE ============ */
+  var fstate = { search: "", filter: "all", open: {} };
+
+  function ficheMatches(f, q) {
+    if (!q) return true;
+    var hay = (f.title + " " + (f.sub || "") + " " + (f.refs || "") + " " +
+      f.blocks.map(function (b) { return (b.h || "") + " " + (b.p || "") + " " + (b.l || []).join(" "); }).join(" ")).toLowerCase();
+    return hay.indexOf(q) >= 0;
+  }
+  function currentFiches() {
+    var q = fstate.search.trim().toLowerCase();
+    var out = [];
+    FICHES.forEach(function (f, i) {
+      if (fstate.filter === "exam" && !f.exam) return;
+      if (fstate.filter === "todo" && f.exam) return;
+      if (!ficheMatches(f, q)) return;
+      out.push({ f: f, i: i });
+    });
+    return out;
+  }
+  function ficheCardHtml(f, i) {
+    var open = !!fstate.open[i];
+    var badge = f.exam
+      ? '<span class="fiche-badge exam" title="' + esc(f.refs || "") + '">📌 déjà tombé</span>'
+      : '<span class="fiche-badge todo">🆕 non traité</span>';
+    var body = f.blocks.map(function (b) {
+      var cls = /^⚠️/.test(b.h) ? " warn" : (/Plan-type/i.test(b.h) ? " plan" : "");
+      var inner = (b.p != null)
+        ? "<p>" + fmt(b.p) + "</p>"
+        : "<ul>" + (b.l || []).map(function (x) { return "<li>" + fmt(x) + "</li>"; }).join("") + "</ul>";
+      return '<div class="fiche-block' + cls + '"><h4>' + esc(b.h) + "</h4>" + inner + "</div>";
+    }).join("");
+    return '<article class="fiche' + (open ? " open" : "") + (f.exam ? " is-exam" : " is-todo") + '">' +
+        '<div class="fiche-head" data-i="' + i + '">' +
+          '<div class="fiche-head-main">' +
+            '<div class="fiche-title">' + esc(f.title) + "</div>" +
+            '<div class="fiche-sub">' + esc(f.sub || "") + "</div>" +
+          "</div>" +
+          '<div class="fiche-head-side">' + badge + '<span class="fiche-caret">▾</span></div>' +
+        "</div>" +
+        '<div class="fiche-body">' +
+          (f.refs ? '<div class="fiche-refs">Tombé en&nbsp;: ' + esc(f.refs) + "</div>" : "") +
+          body +
+        "</div>" +
+      "</article>";
+  }
+  function renderFicheList() {
+    var items = currentFiches();
+    $("#fiche-count").textContent = items.length + " fiche" + (items.length > 1 ? "s" : "") + " affichée" + (items.length > 1 ? "s" : "");
+    var box = $("#fiche-list");
+    if (!items.length) { box.innerHTML = '<div class="empty">Aucune fiche ne correspond à ce filtre.</div>'; return; }
+    var html = "";
+    FICHE_PARTS.forEach(function (part) {
+      var group = items.filter(function (it) { return it.f.part === part; });
+      if (!group.length) return;
+      html += '<h2 class="fiche-part">' + esc(part) + ' <span>' + group.length + "</span></h2>";
+      group.forEach(function (it) { html += ficheCardHtml(it.f, it.i); });
+    });
+    box.innerHTML = html;
+    $$(".fiche-head", box).forEach(function (h) {
+      h.addEventListener("click", function () {
+        var i = +this.getAttribute("data-i");
+        if (fstate.open[i]) delete fstate.open[i]; else fstate.open[i] = true;
+        this.parentNode.classList.toggle("open", !!fstate.open[i]);
+      });
+    });
+  }
+  function renderFiches() {
+    var c = $("#fiche-controls");
+    c.innerHTML =
+      '<div class="row"><input type="search" id="fiche-search" placeholder="🔎 Rechercher (thème, article, arrêt, mot-clé…)" value="' + esc(fstate.search) + '"></div>' +
+      '<div class="row"><span class="filterlabel">Filtre</span>' +
+        '<div class="seg" id="fiche-seg">' +
+          '<button data-f="all" class="' + (fstate.filter === "all" ? "on" : "") + '">Toutes</button>' +
+          '<button data-f="exam" class="' + (fstate.filter === "exam" ? "on" : "") + '">📌 Déjà tombés</button>' +
+          '<button data-f="todo" class="' + (fstate.filter === "todo" ? "on" : "") + '">🆕 Non traités</button>' +
+        "</div>" +
+        '<button class="fchip" id="fiche-expand" style="margin-left:auto">▼ Tout déplier</button>' +
+      "</div>";
+    $("#fiche-search").addEventListener("input", function () { fstate.search = this.value; renderFicheList(); });
+    $$("#fiche-seg button", c).forEach(function (b) {
+      b.addEventListener("click", function () {
+        fstate.filter = this.getAttribute("data-f");
+        $$("#fiche-seg button", c).forEach(function (x) { x.classList.remove("on"); });
+        this.classList.add("on");
+        renderFicheList();
+      });
+    });
+    $("#fiche-expand").addEventListener("click", function () {
+      var items = currentFiches();
+      var anyClosed = items.some(function (it) { return !fstate.open[it.i]; });
+      items.forEach(function (it) { if (anyClosed) fstate.open[it.i] = true; else delete fstate.open[it.i]; });
+      this.textContent = anyClosed ? "▲ Tout replier" : "▼ Tout déplier";
+      renderFicheList();
+    });
+    renderFicheList();
+  }
+
   /* ============ NAVIGATION ============ */
   function setTab(tab) {
     state.tab = tab;
     $$("nav.tabs button").forEach(function (b) { b.classList.toggle("active", b.getAttribute("data-tab") === tab); });
     $("#view-repertoire").style.display = tab === "repertoire" ? "block" : "none";
     $("#view-flashcards").style.display = tab === "flashcards" ? "block" : "none";
+    $("#view-fiches").style.display = tab === "fiches" ? "block" : "none";
     if (tab === "repertoire") { renderControls(); renderList(); }
+    else if (tab === "fiches") { renderFiches(); }
     else { backToSetup(); }
     renderStats();
   }
