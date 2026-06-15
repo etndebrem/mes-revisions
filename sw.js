@@ -1,6 +1,6 @@
 /* Service worker — met l'appli en cache pour un fonctionnement hors-ligne.
    Incrémentez la version (CACHE) après toute modification des fichiers. */
-const CACHE = 'revisions-v9';
+const CACHE = 'revisions-v13';
 
 const ASSETS = [
   './',
@@ -29,7 +29,17 @@ const ASSETS = [
   './revision-histoire-droit/app.js',
   './revision-histoire-droit/data.js',
   './revision-histoire-droit/qcm-data.js',
-  './revision-histoire-droit/qcm.js'
+  './revision-histoire-droit/qcm.js',
+  './revision-vie-politique/index.html',
+  './revision-vie-politique/style.css',
+  './revision-vie-politique/app.js',
+  './revision-vie-politique/data.js',
+  './revision-anglais-constit/index.html',
+  './revision-anglais-constit/style.css',
+  './revision-anglais-constit/app.js',
+  './revision-anglais-constit/data.js',
+  './revision-anglais-constit/qcm-data.js',
+  './revision-anglais-constit/qcm.js'
 ];
 
 self.addEventListener('install', (e) => {
