@@ -26,6 +26,7 @@
   <nav class="tabs">
     <button data-tab="repertoire" class="active">📚 Répertoire</button>
     <button data-tab="flashcards">🎴 Flashcards</button>
+    <button data-tab="fiches">📄 Fiches</button>
     <button id="reset-progress" class="" style="margin-left:auto" title="Effacer la progression sauvegardée">♻️ Réinitialiser la progression</button>
   </nav>
 
@@ -54,12 +55,20 @@
     <div id="fc-done" class="fc-done"></div>
   </section>
 
+  <!-- ===== VUE FICHES ===== -->
+  <section id="view-fiches" style="display:none">
+    <div id="fiche-controls" class="controls"></div>
+    <p id="fiche-count" class="count"></p>
+    <div id="fiche-list" class="fiche-list"></div>
+  </section>
+
   <footer>
     Outil de révision personnel · données extraites de vos notes Obsidian (vie politique contemporaine, B. Lecoq-Pujade) · progression stockée localement dans ce navigateur.
   </footer>
 </div>
 
 <script src="data.js"></script>
+<script src="fiches.js"></script>
 <script src="app.js"></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('../sw.js').catch(function(){});});}</script>
 </body>
