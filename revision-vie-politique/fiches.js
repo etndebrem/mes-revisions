@@ -15,6 +15,7 @@
    ===================================================================== */
 
 window.FICHE_PARTS = [
+  "Introduction",
   "L'État & les gouvernants",
   "Les partis politiques",
   "Les citoyens",
@@ -22,6 +23,55 @@ window.FICHE_PARTS = [
 ];
 
 window.FICHES = [
+
+/* =================================================================
+   0 — INTRODUCTION
+   ================================================================= */
+{
+  part: "Introduction",
+  title: "Qu'est-ce que la vie politique ?",
+  sub: "Le décalage droit / réalité, et la définition de l'activité politique",
+  blocks: [
+    { h: "L'essentiel", p: "La vie politique **ne se réduit pas au cadre constitutionnel** : sous le « vernis » des institutions, elle est faite de rapports de force et de pluralisme (**René Rémond** : *« les pouvoirs régulièrement institués n'absorbent jamais toutes les forces d'une société »*). Pour la saisir, on recourt à la **science politique** — discipline autonome depuis la fin du XIXᵉ s. (**École libre des sciences politiques, 1879**), qui décrit *empiriquement* les phénomènes politiques." },
+    { h: "À retenir", l: [
+      "**« Le » politique** (la *structure* d'un groupement : institutions, valeurs, symboles) ≠ **« la » politique** (une *activité* sociale spécifique).",
+      "La politique ne se définit **ni par sa finalité** (la philosophie ne s'accorde pas) **ni par son objet** (tout problème social peut *devenir* politique).",
+      "**Weber (1919)** la définit par ses **moyens** : *« chercher à participer au pouvoir ou à influer sur sa répartition »*. Elle s'épanouit dans le cadre de l'**État** = *« le monopole de la violence légitime »* (violence + discours de légitimation).",
+      "**Bourdieu** : la vie politique est un **« champ »** — espace autonome, à la fois *champ de lutte* (concurrence, offre politique, clivages comme l'« arc républicain ») et *champ de force*."
+    ]},
+    { h: "Auteurs & repères clés", l: [
+      "**Georges Burdeau** (« Traité de science politique » : *« des hommes qui commandent, d'autres qui obéissent »*).",
+      "**Hauriou & Duguit** : intégrer les sciences sociales au droit (fin XIXᵉ). · **Ostrogorski** (partis, **1903**) · **Siegfried** (comportements électoraux).",
+      "Les 4 branches de la science politique : théorie politique · relations internationales · science administrative · **sociologie politique**."
+    ]},
+    { h: "Plan-type (dissertation)", p: "**I. Une réalité qui déborde le droit** — le décalage entre le discours constitutionnel et la pratique (souveraineté, peuple, séparation des pouvoirs relativisés). **II. Une activité saisie par la science politique** — la définition wébérienne (pouvoir, État, violence légitime) et le « champ » de Bourdieu. *(Nuance : le droit n'est ni impuissant ni tout-puissant.)*" }
+  ]
+},
+{
+  part: "Introduction",
+  title: "L'État, le pouvoir et les forces de la vie politique",
+  sub: "Définir l'État sociologiquement, cartographier les forces, situer dans le temps et l'espace",
+  blocks: [
+    { h: "L'essentiel", p: "Derrière la **définition juridique** de l'État (**Bodin**, Carré de Malberg : monopole de la puissance publique + souveraineté ; **Esmein** : « personnification juridique d'une nation ») se cache une **réalité sociopolitique**. L'État domine le champ politique (**catalyseur**) sans l'épuiser." },
+    { h: "La consistance sociale de l'État (3 positions)", l: [
+      "**Karl Marx** (*Le Capital*, 1867) la **surdétermine** : appareil de domination de classe, voué à disparaître dans la société sans classes.",
+      "**Léon Duguit** (service public) la **nie** : l'État-personne est une « mystification » ; seul existe le rapport gouvernants/gouvernés.",
+      "**Maurice Hauriou** (juste milieu) : l'État est une **institution** que le droit ne fait que constater.",
+      "**Weber** (*Économie et société*, 1921) : « entreprise politique […] au **monopole de la contrainte physique légitime** » — résultat d'un **triple processus** : différenciation, concentration, institutionnalisation."
+    ]},
+    { h: "La typologie des forces politiques", l: [
+      "**Forces individuelles** : personnel politique (« classe politique », *vit de* la politique) · militants occasionnels · masse des citoyens.",
+      "**Forces collectives organisées** : État & pouvoirs publics · corps électoral · **partis** (« entreprises politiques ») · mouvements intermédiaires (associations, syndicats, *lobbies*).",
+      "**Forces collectives spontanées** : les **mouvements sociaux** (logique *bottom-up* : Gilets jaunes, retraites).",
+      "**Forces immatérielles / diffuses** (véhiculées par le langage) : l'**opinion publique** et les **idéologies** (libéralisme, socialisme, nationalisme…)."
+    ]},
+    { h: "Cadre temporel & spatial", l: [
+      "**Temporel** : la vie politique contemporaine s'ouvre avec la **Révolution** (~235 ans) ; histoire = **sédimentation** (ex. « Nouveau Front populaire » 2024) ; passage démocratie d'opinion → électorale → de masse ; **cycles** de clivages.",
+      "**Spatial** : pas de vase clos — **globalisation** et intégration à l'**UE** ; nécessité de la **comparaison** (le phénomène partisan, tardif en France ; la polarisation, commune aux démocraties)."
+    ]},
+    { h: "⚠️ À ne pas confondre", p: "**Gouvernement** (pouvoir de *direction* monopolistique et national) ≠ **gouvernance** (pouvoir de *régulation* entre acteurs publics/privés, à plusieurs niveaux). L'État passe d'une *puissance de direction* à une *autorité de régulation*." }
+  ]
+},
 
 /* =================================================================
    I — L'ÉTAT & LES GOUVERNANTS

@@ -46,7 +46,9 @@ window.AUTEUR_DUELS = [
   { a: "François Guizot", b: "Woodrow Wilson",
     cle: "Deux fondements de la délibération : pour Guizot la loi est juste car RATIONNELLE (souveraineté de la raison) ; pour Wilson elle est juste car MAJORITAIRE (le « régime de la discussion »)." },
   { a: "Léon Blum", b: "André Tardieu",
-    cle: "Réforme de l'État dans les années 1930 : Blum (gauche) veut un vrai chef de gouvernement (« Lettres sur la réforme gouvernementale ») ; Tardieu (droite) veut un « Premier ministre » fort avec droit de dissolution — il inspire 1958." }
+    cle: "Réforme de l'État dans les années 1930 : Blum (gauche) veut un vrai chef de gouvernement (« Lettres sur la réforme gouvernementale ») ; Tardieu (droite) veut un « Premier ministre » fort avec droit de dissolution — il inspire 1958." },
+  { a: "Léon Duguit", b: "Maurice Hauriou",
+    cle: "Deux conceptions de l'État en droit public : Duguit NIE la personnalité de l'État (« mystification », service public) ; Hauriou la fonde sur l'INSTITUTION (réalité sociale préexistante que le droit constate)." }
 ];
 
 window.AUTEURS = [
@@ -56,8 +58,10 @@ window.AUTEURS = [
   nom: "Max Weber", vie: "1864–1920", groupe: "Sociologues & politistes",
   courant: "Sociologue allemand",
   oeuvre: "Le Savant et le Politique (1919)",
-  essence: "Théorise la PROFESSIONNALISATION de la politique et la bureaucratie.",
+  essence: "Théorise l'État (monopole de la violence légitime), la PROFESSIONNALISATION de la politique et la bureaucratie.",
   pos: [
+    { t: "Concept", p: "L'État = « une communauté humaine qui revendique le monopole de la violence légitime » (conf. 1919) ; « une entreprise politique à caractère institutionnel… » (Économie et société, 1921)." },
+    { t: "Concept", p: "La politique = « chercher à participer au pouvoir ou à influer sur sa répartition » : définie par ses moyens, non par ses fins." },
     { t: "Concept", p: "L'homme/la femme politique vit POUR la politique (vocation) et DE la politique (rétribution) : il/elle y consacre l'essentiel de son temps." },
     { t: "Concept", p: "La bureaucratie : forme rationnelle-légale d'organisation du pouvoir (règle de droit, spécialisation, recrutement par concours)." },
     { t: "Concept", p: "Définition sociologique du parti : des « sociations » fondées sur un engagement libre, visant à procurer le pouvoir à leur chef et des avantages à leurs militants." },
@@ -147,8 +151,9 @@ window.AUTEURS = [
   nom: "Pierre Bourdieu", vie: "1930–2002", groupe: "Sociologues & politistes",
   courant: "Sociologue français",
   oeuvre: "La noblesse d'État (1989)",
-  essence: "Analyse l'entre-soi des élites dirigeantes (énarques).",
+  essence: "Pense la vie politique comme un « champ » et analyse l'entre-soi des élites (énarques).",
   pos: [
+    { t: "Concept", p: "Le « champ » politique : espace social autonome (agents spécialisés, règles, langage et fins propres) ; à la fois champ de lutte (concurrence pour le pouvoir) et champ de force." },
     { t: "Concept", p: "La « noblesse d'État » : la formation Sciences Po / ENA homogénéise socialement les dirigeants et crée un « esprit de corps » (réseaux, solidarité d'intérêts)." }
   ],
   confusion: []
@@ -539,6 +544,94 @@ window.AUTEURS = [
   ],
   confusion: [
     { avec: "François Guizot", note: "Wilson = volonté générale juste car MAJORITAIRE ; Guizot = juste car RATIONNELLE. Deux conceptions de la délibération." }
+  ]
+},
+
+/* ====== Ajouts issus de l'Introduction du cours de base ====== */
+{
+  nom: "René Rémond", vie: "1918–2007", groupe: "Sociologues & politistes",
+  courant: "Historien de la vie politique française",
+  oeuvre: "La vie politique en France (3 t.) ; Les Droites en France",
+  essence: "Rappelle que l'État n'absorbe jamais toutes les forces d'une société.",
+  pos: [
+    { t: "Citation", p: "« Les pouvoirs régulièrement institués […] n'absorbent jamais toutes les forces d'une société » : la vie politique déborde le cadre institutionnel." },
+    { t: "Apport", p: "Auteur d'une célèbre typologie des droites françaises (légitimiste, orléaniste, bonapartiste)." }
+  ],
+  confusion: []
+},
+{
+  nom: "André Siegfried", vie: "1875–1959", groupe: "Sociologues & politistes",
+  courant: "Géographe & pionnier de la sociologie électorale",
+  oeuvre: "Tableau politique de la France de l'Ouest (1913)",
+  essence: "Fonde l'analyse des comportements électoraux.",
+  pos: [
+    { t: "Apport", p: "Inaugure l'étude scientifique du vote (sociologie/géographie électorale) ; pave la voie à la pratique des sondages." }
+  ],
+  confusion: [
+    { avec: "Moïse Ostrogorski", note: "Deux pionniers de la science politique : Ostrogorski (1903) étudie les PARTIS ; Siegfried les COMPORTEMENTS électoraux." }
+  ]
+},
+{
+  nom: "Maurice Hauriou", vie: "1856–1929", groupe: "Juristes & théoriciens de l'État",
+  courant: "Juriste publiciste français (école de Toulouse)",
+  oeuvre: "Théorie de l'institution",
+  essence: "Conçoit l'État comme une « institution ».",
+  pos: [
+    { t: "Concept", p: "L'État est une INSTITUTION : une communauté politique organisée, permanente, reconnue par le milieu social. Le droit ne fait que tirer les conséquences de cette réalité préexistante." },
+    { t: "Contexte", p: "Avec Duguit, milite (fin XIXe) pour intégrer les sciences sociales aux facultés de droit." }
+  ],
+  confusion: [
+    { avec: "Léon Duguit", note: "Hauriou = juste milieu (l'État existe comme institution) ; Duguit NIE la personnalité de l'État (« mystification »). Les deux grands rivaux du droit public." }
+  ]
+},
+{
+  nom: "Léon Duguit", vie: "1859–1928", groupe: "Juristes & théoriciens de l'État",
+  courant: "Juriste publiciste français (école de Bordeaux)",
+  oeuvre: "Théorie du service public",
+  essence: "Nie la personnalité juridique de l'État.",
+  pos: [
+    { t: "Concept", p: "L'État comme personne morale souveraine est une « mystification » : la seule réalité sociale est le rapport gouvernants/gouvernés. Le fondement du pouvoir est le SERVICE PUBLIC, non la souveraineté." }
+  ],
+  confusion: [
+    { avec: "Maurice Hauriou", note: "Duguit = l'État-personne n'existe pas (service public) ; Hauriou = l'État existe comme institution. À ne pas inverser." },
+    { avec: "Karl Marx", note: "Tous deux dissolvent l'État abstrait dans des rapports sociaux, mais Duguit y substitue le service public, Marx la domination de classe." }
+  ]
+},
+{
+  nom: "Jean Bodin", vie: "1530–1596", groupe: "Juristes & théoriciens de l'État",
+  courant: "Théoricien de la souveraineté",
+  oeuvre: "Les Six Livres de la République (1576)",
+  essence: "Père de la définition juridique de l'État souverain.",
+  pos: [
+    { t: "Concept", p: "L'État = corporation politique au monopole de la puissance publique sur un territoire et une population, à laquelle le droit reconnaît la SOUVERAINETÉ et la personnalité morale (déf. reprise par Carré de Malberg)." }
+  ],
+  confusion: [
+    { avec: "Léon Duguit", note: "Bodin FONDE la souveraineté de l'État-personne ; Duguit la récuse comme une mystification." }
+  ]
+},
+{
+  nom: "Karl Marx", vie: "1818–1883", groupe: "Philosophes & classiques",
+  courant: "Philosophe & économiste (matérialisme historique)",
+  oeuvre: "Le Capital (1867)",
+  essence: "Fait de l'État l'appareil de domination d'une classe.",
+  pos: [
+    { t: "Thèse", p: "L'État est l'appareil de domination de la classe bourgeoise sur le prolétariat (expression d'un rapport socio-économique de classes)." },
+    { t: "Thèse", p: "Après la révolution prolétarienne, dans la société communiste sans classes, l'État deviendra inutile (« dépérissement »)." }
+  ],
+  confusion: [
+    { avec: "Léon Duguit", note: "Marx SURDÉTERMINE la consistance sociale de l'État (domination de classe) ; Duguit la NIE (mystification). Hauriou tient le juste milieu." }
+  ]
+},
+{
+  nom: "Nicolas de Condorcet", vie: "1743–1794", groupe: "Philosophes & classiques",
+  courant: "Mathématicien & philosophe des Lumières",
+  oeuvre: "Essai sur l'application de l'analyse… (1785)",
+  essence: "Cherche dans les mathématiques la garantie d'une délibération vraie.",
+  pos: [
+    { t: "Apport", p: "Conçoit des systèmes de délibération faisant appel aux mathématiques pour s'assurer que la décision de la majorité soit l'expression d'une vérité rationnelle (« théorème du jury »)." }
+  ],
+  confusion: [
+    { avec: "François Guizot", note: "Même famille (la loi comme œuvre rationnelle) : Condorcet la garantit par le calcul ; Guizot par la « souveraineté de la raison »." }
   ]
 }
 
