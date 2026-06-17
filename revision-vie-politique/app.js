@@ -411,9 +411,12 @@
     $("#view-repertoire").style.display = tab === "repertoire" ? "block" : "none";
     $("#view-flashcards").style.display = tab === "flashcards" ? "block" : "none";
     var fv = $("#view-fiches"); if (fv) fv.style.display = tab === "fiches" ? "block" : "none";
+    var av = $("#view-auteurs"); if (av) av.style.display = tab === "auteurs" ? "block" : "none";
+    if (tab !== "auteurs" && window.AUTEURS_VIEW) window.AUTEURS_VIEW.leave();
     if (tab === "repertoire") { renderControls(); renderList(); }
     else if (tab === "flashcards") { backToSetup(); }
     else if (tab === "fiches") { renderFiches(); }
+    else if (tab === "auteurs" && window.AUTEURS_VIEW) { window.AUTEURS_VIEW.enter(); }
     renderStats();
   }
 
