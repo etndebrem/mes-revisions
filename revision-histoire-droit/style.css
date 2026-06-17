@@ -178,3 +178,40 @@ footer{ text-align:center; color:var(--muted); font-size:.8rem; margin-top:28px 
 .review-item.bad .review-a{color:var(--ko)}
 .review-item.skip .review-a{color:#8a6400}
 .review-e{font-size:.85rem; color:var(--muted); margin-top:6px}
+
+/* ===== Personnages ===== */
+.aut-groupe{font-size:.92rem; text-transform:uppercase; letter-spacing:.6px; color:var(--eu-blue); margin:22px 2px 12px; padding-bottom:6px; border-bottom:2px solid var(--line)}
+.aut-groupe:first-child{margin-top:6px}
+.aut-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+.aut-grid.duo{margin-top:14px}
+@media(max-width:760px){.aut-grid{grid-template-columns:1fr}}
+.aut-card{background:var(--card); border:1px solid var(--line); border-left:4px solid var(--eu-blue); border-radius:12px; padding:15px 17px; box-shadow:var(--shadow)}
+.aut-head{display:flex; justify-content:space-between; align-items:baseline; gap:10px; flex-wrap:wrap}
+.aut-nom{font-weight:800; font-size:1.12rem; color:var(--ink)}
+.aut-vie{font-size:.78rem; color:var(--muted); font-variant-numeric:tabular-nums; white-space:nowrap}
+.aut-courant{font-size:.82rem; font-weight:700; color:var(--auteur); margin-top:2px}
+.aut-oeuvre{font-size:.84rem; color:var(--texte); margin-top:6px; font-style:italic}
+.aut-essence{font-size:.93rem; color:#2d3647; margin:10px 0 4px; padding:9px 11px; background:#f6f8fd; border-radius:8px; border-left:3px solid var(--gold)}
+.aut-positions{margin-top:8px}
+.aut-pos{display:flex; gap:8px; padding:7px 0; border-top:1px dashed var(--line); font-size:.88rem}
+.aut-pos:first-child{border-top:0}
+.aut-pos-t{flex:0 0 118px; font-weight:700; color:var(--notion); font-size:.8rem; padding-top:1px}
+@media(max-width:520px){.aut-pos{flex-direction:column; gap:2px}.aut-pos-t{flex:none}}
+.aut-pos-p{color:#2d3647}
+.aut-confusions{margin-top:11px; padding-top:10px; border-top:1px solid var(--line)}
+.aut-conf-h{font-size:.74rem; text-transform:uppercase; letter-spacing:.5px; color:var(--ko); font-weight:800; margin-bottom:6px}
+.aut-conf{font-size:.84rem; color:#2d3647; background:var(--ko-bg); border-radius:8px; padding:8px 10px; margin-bottom:6px}
+.aut-conf b{color:var(--ko)}
+
+.aut-duel-chip.on{background:var(--adage); border-color:var(--adage); color:#fff}
+.aut-duel-cle{background:linear-gradient(135deg,var(--eu-blue),var(--eu-blue-2)); color:#fff; border-radius:12px; padding:14px 16px; font-size:.95rem; line-height:1.5; box-shadow:var(--shadow)}
+.aut-duel-table{width:100%; border-collapse:separate; border-spacing:0; margin-top:14px; background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden; box-shadow:var(--shadow)}
+.aut-duel-table th,.aut-duel-table td{padding:11px 13px; text-align:left; vertical-align:top; font-size:.88rem; border-top:1px solid var(--line)}
+.aut-duel-table thead th{background:#f0f4ff; border-top:0; width:40%}
+.aut-duel-table thead th:first-child{width:20%; background:var(--card)}
+.aut-duel-nom{font-weight:800; font-size:1.02rem; color:var(--eu-blue)}
+.aut-duel-vie{font-size:.74rem; color:var(--muted); font-weight:600; margin-top:2px}
+.aut-duel-table tbody th{font-weight:700; color:var(--notion); font-size:.82rem; background:#fbfcff}
+.aut-duel-table td{color:#2d3647}
+.aut-na{color:var(--line-2)}
+@media(max-width:640px){.aut-duel-table thead th{width:auto}.aut-duel-table th,.aut-duel-table td{padding:8px 9px; font-size:.82rem}}

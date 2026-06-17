@@ -327,10 +327,13 @@
     $("#view-repertoire").style.display = tab === "repertoire" ? "block" : "none";
     $("#view-flashcards").style.display = tab === "flashcards" ? "block" : "none";
     $("#view-qcm").style.display = tab === "qcm" ? "block" : "none";
+    $("#view-auteurs").style.display = tab === "auteurs" ? "block" : "none";
     if (tab !== "qcm" && window.QCM_VIEW) window.QCM_VIEW.leave();
+    if (tab !== "auteurs" && window.AUTEURS_VIEW) window.AUTEURS_VIEW.leave();
     if (tab === "repertoire") { renderControls(); renderList(); }
     else if (tab === "flashcards") { backToSetup(); }
     else if (tab === "qcm" && window.QCM_VIEW) { window.QCM_VIEW.enter(); }
+    else if (tab === "auteurs" && window.AUTEURS_VIEW) { window.AUTEURS_VIEW.enter(); }
     renderStats();
   }
 

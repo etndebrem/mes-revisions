@@ -27,6 +27,7 @@
     <button data-tab="repertoire" class="active">📚 Répertoire</button>
     <button data-tab="flashcards">🎴 Flashcards</button>
     <button data-tab="qcm">📝 QCM</button>
+    <button data-tab="auteurs">👤 Personnages</button>
     <button id="reset-progress" class="" style="margin-left:auto" title="Effacer la progression sauvegardée">♻️ Réinitialiser la progression</button>
   </nav>
 
@@ -62,6 +63,9 @@
     <div id="qcm-done" class="fc-done"></div>
   </section>
 
+  <!-- ===== VUE PERSONNAGES ===== -->
+  <section id="view-auteurs" style="display:none"></section>
+
   <footer>
     Outil de révision personnel · données extraites de vos notes Obsidian (histoire du droit des obligations) · progression stockée localement dans ce navigateur.
   </footer>
@@ -69,8 +73,10 @@
 
 <script src="data.js"></script>
 <script src="qcm-data.js"></script>
+<script src="auteurs-data.js"></script>
 <script src="app.js"></script>
 <script src="qcm.js"></script>
+<script src="auteurs.js"></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('../sw.js').catch(function(){});});}</script>
 </body>
 </html>
