@@ -7,6 +7,7 @@
   var SECONDS_PER_Q = 72;            // annale : 50 questions en 1 h
   var STORE_KEY = "histdroit_qcm_v1"; // stats { id: {seen, ko} }
   var LETTERS = ["A", "B", "C", "D"];
+  var N_ANNALE = BANK.filter(function (q) { return q.an; }).length;
 
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
@@ -35,7 +36,7 @@
   var stats = loadStats();
 
   /* --- réglages de session --- */
-  var setup = { themes: {}, count: 50, mode: "examen", chrono: true, onlyMissed: false, bareme: "2023" };
+  var setup = { themes: {}, count: 50, mode: "examen", chrono: true, onlyMissed: false, bareme: "2023", onlyAnnale: false };
   function anLabel(an) { return typeof an === "string" ? an : "janv. 2023"; }
   function skipPenalty() { return setup.bareme === "2019" ? 0.5 : 0; }
   var run = null; // { items, pos, mode, chrono, total, answered:[], revealed, timerId, endAt }
@@ -48,6 +49,7 @@
     var tk = activeThemes();
     var missed = setup.onlyMissed ? missedIds() : null;
     return BANK.filter(function (q) {
+      if (setup.onlyAnnale && !q.an) return false;
       if (tk.length && tk.indexOf(q.th) < 0) return false;
       if (missed && missed.indexOf(q.id) < 0) return false;
       return true;
@@ -78,7 +80,12 @@
       '<p class="qcm-intro">Conditions des annales (janv. 2019, rattrapage 2018-19, janv. 2023) : <b>50 questions</b> en <b>1 heure</b>, aucun document.<br>' +
       'Barème 2023 : bonne réponse <b>+1</b> · mauvaise réponse <b>−0,5</b> · pas de réponse <b>0</b>. En 2019, l’absence de réponse coûtait aussi <b>−0,5</b>.</p>' +
       '<div class="controls" style="box-shadow:none;border:0;padding:0;margin:0">' +
-        '<div class="row"><span class="filterlabel">Chapitre</span><div class="chipset">' + themeChips +
+        '<div class="row"><span class="filterlabel">Source</span>' +
+          '<div class="seg" id="qcm-source">' +
+            '<button data-src="all" class="' + (setup.onlyAnnale ? "" : "on") + '">Toutes les questions</button>' +
+            '<button data-src="annale" class="' + (setup.onlyAnnale ? "on" : "") + '">📜 Annales uniquement (' + N_ANNALE + ')</button>' +
+          '</div></div>' +
+        '<div class="row" style="margin-top:12px"><span class="filterlabel">Chapitre</span><div class="chipset">' + themeChips +
           '<button class="fchip" id="qcm-reset-th">✕ tous</button></div></div>' +
         '<div class="row" style="margin-top:12px"><span class="filterlabel">Questions</span>' +
           '<div class="seg" id="qcm-count">' + countBtns + '</div></div>' +
@@ -106,6 +113,13 @@
       });
     });
     $("#qcm-reset-th").addEventListener("click", function () { setup.themes = {}; renderSetup(); });
+    $$("#qcm-source button", c).forEach(function (b) {
+      b.addEventListener("click", function () {
+        setup.onlyAnnale = this.getAttribute("data-src") === "annale";
+        $$("#qcm-source button", c).forEach(function (x) { x.classList.remove("on"); });
+        this.classList.add("on"); updateN();
+      });
+    });
     $$("#qcm-count button", c).forEach(function (b) {
       b.addEventListener("click", function () {
         setup.count = parseInt(this.getAttribute("data-count"), 10);
