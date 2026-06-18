@@ -8,6 +8,21 @@
   var POINT_OK = 0.5;                 // barème : bonne réponse +0,5 ; mauvaise 0 ; absence 0
   var STORE_KEY = "ukconst_qcm_v1";   // stats { id: {seen, ko} }
   var LETTERS = ["A", "B", "C", "D"];
+  var N_ANNALE = BANK.filter(function (q) { return q.an; }).length;
+
+  // Les 6 « pièges types » de l'annale (champ q.tr) — affichés dans le corrigé
+  var TRAP_LABELS = {
+    confusion: "Confusion d'éléments proches (offices, conventions, sections, instruments…)",
+    absolu: "Mot absolu / limitatif (« only », « all », « always », « limited to », « required by statute »…)",
+    source: "Mauvaise source / base juridique (convention ≠ statute ≠ prérogative ; quel Act ?)",
+    reforme: "Chiffres / mécanisme d'une réforme récente (nombre, date, modalité)",
+    justiciabilite: "Droit vs politique / (non-)justiciabilité (« as a matter of law » ≠ « of convention »)",
+    intrus: "« Which is true / false » : repérer le seul énoncé intrus parmi plusieurs vrais"
+  };
+  function trapHtml(q) {
+    return (q.tr && TRAP_LABELS[q.tr])
+      ? '<div class="qcm-trap">⚠️ Piège type : ' + esc(TRAP_LABELS[q.tr]) + '</div>' : '';
+  }
 
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
@@ -36,7 +51,7 @@
   var stats = loadStats();
 
   /* --- réglages de session --- */
-  var setup = { themes: {}, count: 40, mode: "examen", chrono: true, onlyMissed: false };
+  var setup = { themes: {}, count: 40, mode: "examen", chrono: true, onlyMissed: false, onlyAnnale: false };
   function anLabel(an) { return typeof an === "string" ? an : "2025-26"; }
   var run = null; // { items, pos, mode, chrono, total, answered:[], revealed, timerId, endAt }
 
@@ -48,6 +63,7 @@
     var tk = activeThemes();
     var missed = setup.onlyMissed ? missedIds() : null;
     return BANK.filter(function (q) {
+      if (setup.onlyAnnale && !q.an) return false;
       if (tk.length && tk.indexOf(q.th) < 0) return false;
       if (missed && missed.indexOf(q.id) < 0) return false;
       return true;
@@ -78,7 +94,12 @@
       '<p class="qcm-intro">Conditions de l’annale (Introduction to UK Public Law, P. Ducoulombier) : <b>40 questions</b> en <b>1 heure</b>, réponse unique, aucun document.<br>' +
       'Barème : bonne réponse <b>+0,5</b> · mauvaise réponse <b>0</b> · pas de réponse <b>0</b> (pas de point négatif). Note ramenée sur 20.</p>' +
       '<div class="controls" style="box-shadow:none;border:0;padding:0;margin:0">' +
-        '<div class="row"><span class="filterlabel">Chapitre</span><div class="chipset">' + themeChips +
+        '<div class="row"><span class="filterlabel">Source</span>' +
+          '<div class="seg" id="qcm-source">' +
+            '<button data-src="all" class="' + (setup.onlyAnnale ? "" : "on") + '">Toutes les questions</button>' +
+            '<button data-src="annale" class="' + (setup.onlyAnnale ? "on" : "") + '">📜 Annales uniquement (' + N_ANNALE + ')</button>' +
+          '</div></div>' +
+        '<div class="row" style="margin-top:12px"><span class="filterlabel">Chapitre</span><div class="chipset">' + themeChips +
           '<button class="fchip" id="qcm-reset-th">✕ tous</button></div></div>' +
         '<div class="row" style="margin-top:12px"><span class="filterlabel">Questions</span>' +
           '<div class="seg" id="qcm-count">' + countBtns + '</div></div>' +
@@ -101,6 +122,13 @@
       });
     });
     $("#qcm-reset-th").addEventListener("click", function () { setup.themes = {}; renderSetup(); });
+    $$("#qcm-source button", c).forEach(function (b) {
+      b.addEventListener("click", function () {
+        setup.onlyAnnale = this.getAttribute("data-src") === "annale";
+        $$("#qcm-source button", c).forEach(function (x) { x.classList.remove("on"); });
+        this.classList.add("on"); updateN();
+      });
+    });
     $$("#qcm-count button", c).forEach(function (b) {
       b.addEventListener("click", function () {
         setup.count = parseInt(this.getAttribute("data-count"), 10);
@@ -245,7 +273,7 @@
       ? "⏭ Sans réponse (0 pt)"
       : (it.opts[idx].good ? "✅ Bonne réponse (+0,5 pt)" : "❌ Mauvaise réponse (0 pt)");
     $("#qcm-expl").innerHTML =
-      '<div class="qcm-expl"><b>' + verdict + '</b><br>' + esc(it.q.e) + '</div>' +
+      '<div class="qcm-expl"><b>' + verdict + '</b><br>' + esc(it.q.e) + trapHtml(it.q) + '</div>' +
       '<button class="btn" id="qcm-next" style="margin-top:12px">Question suivante → <span class="kbd">Entrée</span></button>';
     $("#qcm-next").addEventListener("click", next);
     $("#qcm-next").focus();
@@ -291,7 +319,7 @@
       return '<div class="review-item ' + cls + '">' +
         '<div class="review-q"><b>' + (i + 1) + '.</b> ' + esc(it.q.q) + '</div>' +
         '<div class="review-a">' + verdict + ' &nbsp;·&nbsp; Bonne réponse : <b>' + LETTERS[goodIdx] + '. ' + esc(it.opts[goodIdx].text) + '</b></div>' +
-        '<div class="review-e">' + esc(it.q.e) + '</div>' +
+        '<div class="review-e">' + esc(it.q.e) + '</div>' + trapHtml(it.q) +
       '</div>';
     }).join("");
 

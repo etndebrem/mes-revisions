@@ -178,3 +178,4 @@ footer{ text-align:center; color:var(--muted); font-size:.8rem; margin-top:28px 
 .review-item.bad .review-a{color:var(--ko)}
 .review-item.skip .review-a{color:#8a6400}
 .review-e{font-size:.85rem; color:var(--muted); margin-top:6px}
+.qcm-trap{margin-top:9px; padding:7px 10px; background:#fff4e0; border:1px solid #f3d6a4; border-radius:7px; font-size:.82rem; font-weight:600; color:#8a5a00}

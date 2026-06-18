@@ -12,6 +12,30 @@
      f  : 1 = ordre des options figé (ne pas mélanger) — utilisé pour Vrai/Faux
           et pour les questions de l'annale (afin de coller au sujet réel)
      an : 1 = question issue de l'annale (badge 📜)
+     tr : type de PIÈGE travaillé par la question (affiché dans le corrigé).
+
+   ───────────────────────────────────────────────────────────────────
+   LES 6 PIÈGES TYPES DE L'ANNALE (champ « tr ») — repérés sur le sujet
+   Session 1 2025/26 et réinjectés dans les questions d'entraînement :
+     "confusion"      → confusion d'éléments proches : offices (Lord Advocate
+                        vs Advocate General ; Lord Chief Justice vs Lord
+                        Chancellor), conventions (Salisbury vs Sewel),
+                        sections (s.29/33/35 Scotland Act), instruments
+                        (Green vs White Paper ; Private Member's vs private bill).
+     "absolu"         → un mot absolu/limitatif rend faux un énoncé presque
+                        vrai : « only », « all », « always », « limited to »,
+                        « required by statute », « in any circumstances »…
+     "source"         → mauvaise base juridique : convention ≠ statute ≠
+                        prérogative ; « quel Act fait X ? ».
+     "reforme"        → chiffres / mécanisme exact d'une réforme récente
+                        (nombre de membres, date, modalité d'entrée en vigueur).
+     "justiciabilite" → droit vs politique / (non-)justiciabilité :
+                        « as a matter of law » vs « as a matter of convention » ;
+                        clause d'ouster ; déclaration d'incompatibilité (HRA)
+                        vs arrêt de la CEDH.
+     "intrus"         → « Which statement is true / false ? » : 3 énoncés vrais,
+                        1 intrus (ou l'inverse) — repérer le seul détail faux.
+   ───────────────────────────────────────────────────────────────────
 
    ⚠️ Les réponses des questions d'annale ont été déterminées d'après le cours,
    pas d'après les croix de la copie scannée (l'étudiant·e s'était trompé·e
@@ -33,12 +57,12 @@ window.QCM_THEMES = [
 window.QCM = [
 
 /* ============ QUESTIONS D'ANNALE (Session 1, 2025/2026) ============ */
-{th:"Devolution", an:1, f:1,
+{th:"Devolution", an:1, f:1, tr:"absolu",
  q:"Challenges to bills of the Scottish Parliament on the basis of section 33 of the Scotland Act are limited to the traditional grounds for judicial review.",
  o:["True","False"], a:1,
  e:"Section 33 lets the Law Officers refer a Bill to the Supreme Court on the question of legislative competence (reserved matters, Convention rights, etc.). That is distinct from — and not limited to — the traditional grounds of judicial review (illegality, irrationality, procedural impropriety)."},
 
-{th:"The UK Constitution", an:1, f:1,
+{th:"The UK Constitution", an:1, f:1, tr:"intrus",
  q:"Which of the following statements is correct?",
  o:["Institutional writers are a source of the UK constitution.",
     "Constitutional conventions are legal sources of the UK constitution.",
@@ -47,17 +71,17 @@ window.QCM = [
  a:0,
  e:"Works of authority / institutional writers (Dicey, Bagehot…) are a recognised, if minor, source of the UK constitution. Conventions are non-legal (political) sources, not enforced by courts (B is wrong); the sources also include the prerogative and works of authority (D is wrong)."},
 
-{th:"The UK Parliament", an:1, f:1,
+{th:"The UK Parliament", an:1, f:1, tr:"confusion",
  q:"Money bills are introduced in the House of Lords, because of its non-elected character and thus independent nature.",
  o:["True","False"], a:1,
  e:"Money bills are introduced in the House of Commons — the elected chamber — under its financial privilege (Art. 4 Bill of Rights 1689). The Lords may delay a money bill by at most one month (Parliament Act 1911)."},
 
-{th:"The Crown & the Government", an:1, f:1,
+{th:"The Crown & the Government", an:1, f:1, tr:"source",
  q:"The King is required by Statute Law to grant Royal Assent to a bill adopted by both Houses of Parliament.",
  o:["False","True"], a:0,
  e:"Royal Assent is governed by constitutional convention (and is a prerogative act), not by statute. By convention the monarch always grants it — Royal Assent has not been refused since 1708."},
 
-{th:"Devolution", an:1, f:1,
+{th:"Devolution", an:1, f:1, tr:"reforme",
  q:"The Senedd Cymru (Members and Elections) Act 2024…",
  o:["decreases the number of members to 90, changes the voting system to proportional representation, increases the length of the mandate of the Senedd to 5 years.",
     "increases the number of members to 96, changes the voting system to proportional representation, decreases the length of the mandate of the Senedd to 4 years.",
@@ -66,34 +90,34 @@ window.QCM = [
  a:1,
  e:"The Act increases the Senedd from 60 to 96 members, introduces a fully proportional closed-list system, and provides for ordinary general elections every 4 years (from 2026)."},
 
-{th:"The UK Constitution", an:1, f:1,
+{th:"The UK Constitution", an:1, f:1, tr:"source",
  q:"The UK constitution is the superior law of the land as the UK Supreme Court enjoys the power to declare invalid legislation incompatible with it.",
  o:["True","False"], a:1,
  e:"Parliamentary sovereignty means no law is higher than an Act of Parliament; the UK Supreme Court cannot invalidate primary legislation. Under s.4 HRA it may only issue a declaration of incompatibility, which does not affect the validity of the Act."},
 
-{th:"Separation of Powers", an:1, f:1,
+{th:"Separation of Powers", an:1, f:1, tr:"confusion",
  q:"The head of the judiciary in England and Wales is…",
  o:["The Lord Advocate.","The Lord Chancellor.","The Lord of appeal in ordinary.","The Lord Chief Justice."],
  a:3,
  e:"Since the Constitutional Reform Act 2005, the Lord Chief Justice is Head of the Judiciary of England and Wales (a role formerly held by the Lord Chancellor). The Lord Advocate is a Scottish officer; the Lords of Appeal in Ordinary were replaced by the Supreme Court."},
 
-{th:"The UK Parliament", an:1, f:1,
+{th:"The UK Parliament", an:1, f:1, tr:"confusion",
  q:"The Parliament Acts apply to bills introduced in the House of Lords.",
  o:["True","False"], a:1,
  e:"The Parliament Acts 1911 & 1949 let the House of Commons obtain Royal Assent without the Lords' consent; they apply to public bills originating in the Commons, not to bills introduced in the Lords."},
 
-{th:"Devolution", an:1, f:1,
+{th:"Devolution", an:1, f:1, tr:"confusion",
  q:"Who is the Scottish Government legal adviser?",
  o:["The Advocate General for Scotland.","The Secretary of State for Scotland.","The Lord Advocate.","The Counsel for Scotland."],
  a:2,
  e:"The Lord Advocate is the chief legal adviser to the Scottish Government. The Advocate General for Scotland advises the UK Government on Scots law; the Secretary of State for Scotland is a UK minister."},
 
-{th:"The UK Parliament", an:1, f:1,
+{th:"The UK Parliament", an:1, f:1, tr:"reforme",
  q:"The Representation of the People bill seeks to extend the right to vote in England, Wales and Scotland to individuals aged 16 and above.",
  o:["True","False"], a:1,
  e:"The announced 'votes at 16' reform lowers the voting age for UK parliamentary elections across the whole United Kingdom — including Northern Ireland — so a statement limited to England, Wales and Scotland is inaccurate. (À recouper avec le corrigé officiel.)"},
 
-{th:"The UK Parliament", an:1, f:1,
+{th:"The UK Parliament", an:1, f:1, tr:"confusion",
  q:"Which of the following statements most accurately describes what the Salisbury convention entails?",
  o:["That the House of Lords will not defeat Government bills seeking to implement manifesto commitments.",
     "That Money bills start their life in the House of Lords.",
@@ -102,7 +126,7 @@ window.QCM = [
  a:0,
  e:"The Salisbury(-Addison) Convention: the Lords will not defeat at second reading a Government bill that implements a manifesto commitment. (D describes the Sewel Convention.)"},
 
-{th:"The UK Parliament", an:1, f:1,
+{th:"The UK Parliament", an:1, f:1, tr:"confusion",
  q:"Which of the following statements most accurately defines what a Private Member's bill is?",
  o:["A bill affecting the general public but with a significant impact on specific individuals or groups.",
     "A bill relating to a matter of individual, corporate or local interest and changing the law as it applies to these specific individuals or organisations.",
@@ -111,7 +135,7 @@ window.QCM = [
  a:3,
  e:"A Private Member's bill is a public bill introduced by a backbencher (not a government minister). Option B describes a 'private bill' (local/personal interest); C describes a government bill."},
 
-{th:"The Crown & the Government", an:1, f:1,
+{th:"The Crown & the Government", an:1, f:1, tr:"justiciabilite",
  q:"The Dissolution and Calling of Parliament Act 2022 does not prevent Courts from ruling on the Prime Minister's decision to dissolve Parliament, as this is a justiciable issue.",
  o:["False","True"], a:0,
  e:"False. Section 3 of the DCPA 2022 (the 'ouster clause') revives the prerogative of dissolution and makes its exercise non-justiciable — the courts may not review the decision to dissolve Parliament."},
@@ -125,7 +149,7 @@ window.QCM = [
  a:2,
  e:"In R (HS2 Action Alliance) v Secretary of State for Transport (2014), the Supreme Court suggested there may be a hierarchy of constitutional statutes/principles: the ECA 1972 did not necessarily require fundamental constitutional principles (e.g. Art. 9 Bill of Rights) to be set aside, so EU-law primacy was not guaranteed in all circumstances."},
 
-{th:"Parliamentary Supremacy", an:1, f:1,
+{th:"Parliamentary Supremacy", an:1, f:1, tr:"confusion",
  q:"In the case of Hirst v the UK n°2, it was ruled that…",
  o:["the United Kingdom had to give all prisoners the right to vote.",
     "the United Kingdom was in breach of article 3 of the First additional protocol to the ECHR.",
@@ -134,12 +158,12 @@ window.QCM = [
  a:1,
  e:"Hirst v UK (No 2) (2005, ECtHR Grand Chamber): the blanket ban on convicted prisoners voting breached Article 3 of Protocol No. 1 (right to free elections). It did not require votes for ALL prisoners (states keep a margin of appreciation); a 'declaration of incompatibility' is a domestic HRA remedy, not an ECtHR ruling."},
 
-{th:"Devolution", an:1, f:1,
+{th:"Devolution", an:1, f:1, tr:"justiciabilite",
  q:"A devolved system does not preserve the powers of the central Parliament in relation to all matters, whether devolved or reserved.",
  o:["True","False"], a:1,
  e:"False. Unlike federalism, devolution preserves the UK Parliament's legal sovereignty over ALL matters — devolved and reserved (Scotland Act 1998, s.28(7)). Westminster can still legislate on devolved matters; the Sewel Convention is only a political restraint."},
 
-{th:"Devolution", an:1, f:1,
+{th:"Devolution", an:1, f:1, tr:"confusion",
  q:"Which of the following statements is true? On the basis of section 35 of the Scotland Act…",
  o:["The Lord Advocate can refer a devolution issue to the Supreme Court.",
     "The Presiding officer of the Scottish Parliament may refuse to send a bill of the Scottish Parliament for Royal assent if he/she has reasonable grounds to believe the bill is outside the legislative competence of the Parliament.",
@@ -148,7 +172,7 @@ window.QCM = [
  a:3,
  e:"Section 35 of the Scotland Act 1998 lets the Secretary of State make an order preventing a Bill being submitted for Royal Assent if there are reasonable grounds to believe it would be incompatible with international obligations/defence/national security, or would adversely affect the operation of the law as it applies to reserved matters (power used against the Gender Recognition Reform (Scotland) Bill, 2023)."},
 
-{th:"The UK Parliament", an:1, f:1,
+{th:"The UK Parliament", an:1, f:1, tr:"reforme",
  q:"The House of Lords (Hereditary Peers) Act 2026…",
  o:["Replaces Hereditary peers with Life Peers at the next Parliamentary session.",
     "Removes Hereditary Peers from the House of Lords with immediate effect.",
@@ -166,7 +190,7 @@ window.QCM = [
  a:1,
  e:"S.19 HRA: before second reading the minister in charge of a bill must make EITHER a statement of compatibility with Convention rights, OR a statement that, although unable to do so, the Government nevertheless wishes the House to proceed."},
 
-{th:"Parliamentary Supremacy", an:1, f:1,
+{th:"Parliamentary Supremacy", an:1, f:1, tr:"confusion",
  q:"According to the Human Rights Act 1998, UK courts…",
  o:["must take into account any relevant ECtHR case-law.",
     "must only take into account relevant Grand chamber case-law.",
@@ -175,13 +199,13 @@ window.QCM = [
  a:0,
  e:"S.2 HRA requires courts to 'take into account' any relevant Strasbourg (ECtHR) case law — they must consider it but are not bound by it, and there is no preliminary-reference mechanism to the ECtHR."},
 
-{th:"Separation of Powers", an:1, f:1,
+{th:"Separation of Powers", an:1, f:1, tr:"source",
  q:"Which Act reformed the House of Lords by removing the final appeal court from within the chamber?",
  o:["The Parliament Act 1911.","The Constitutional Reform Act 2005.","The House of Lords Act 1999.","The Supreme Court Act 1981."],
  a:1,
  e:"The Constitutional Reform Act 2005 created the UK Supreme Court (operational 2009), removing the Appellate Committee of the House of Lords (the final appeal court) from the legislative chamber."},
 
-{th:"Devolution", an:1, f:1,
+{th:"Devolution", an:1, f:1, tr:"intrus",
  q:"Which of the following statements is false?",
  o:["The validity of an Act of the Scottish Parliament is not affected by any invalidity in the proceedings of the Parliament leading to its enactment.",
     "Acts of the Scottish Parliament are amenable to challenge before the courts on certain grounds.",
@@ -190,7 +214,7 @@ window.QCM = [
  a:3,
  e:"D is false: Acts of the Scottish Parliament DO receive Royal Assent (Scotland Act 1998, ss.28 & 32-33). A, B and C are true — in particular s.29 makes provisions relating to reserved matters 'not law' (outside competence)."},
 
-{th:"Separation of Powers", an:1, f:1,
+{th:"Separation of Powers", an:1, f:1, tr:"source",
  q:"Which statute imposes a duty on ministers to uphold the independence of the judiciary?",
  o:["The Disqualification Act 1975.","The Freedom of Information Act 2000.","The Constitutional Reform Act 2005.","The Senior Courts Act 1981."],
  a:2,
@@ -609,7 +633,7 @@ window.QCM = [
  e:"The Cabinet is the supreme directive authority of central government, yet it has no formal legal powers of its own — it exists and operates by convention."},
 
 /* ============ CONSTITUTIONAL CONVENTIONS ============ */
-{th:"Constitutional Conventions",
+{th:"Constitutional Conventions", tr:"confusion",
  q:"Constitutional conventions are…",
  o:["legal rules enforced by the courts",
     "non-legal rules of political morality, not enforced by the courts but treated as binding",
@@ -617,7 +641,7 @@ window.QCM = [
     "always written in a single document"],
  a:1,
  e:"Dicey (1885): conventions are 'understandings, habits or practices… not in reality laws at all since they are not enforced by the courts.' They carry political, not legal, sanctions — and must be distinguished from international conventions (which are legal, written rules)."},
-{th:"Constitutional Conventions",
+{th:"Constitutional Conventions", tr:"confusion",
  q:"Which is NOT one of the three questions in Jennings' test for identifying a convention?",
  o:["What are the precedents?",
     "Did the actors believe they were bound by a rule?",
@@ -625,11 +649,11 @@ window.QCM = [
     "Has the practice been enforced by a court?"],
  a:3,
  e:"Jennings (1959) asks: (1) precedents? (2) did the actors feel bound? (3) is there a reason (an underlying constitutional principle)? Enforcement by a court is precisely what conventions LACK — they are non-legal."},
-{th:"Constitutional Conventions", f:1,
+{th:"Constitutional Conventions", f:1, tr:"justiciabilite",
  q:"The breach of a constitutional convention can be sanctioned by the courts.",
  o:["True","False"], a:1,
  e:"Conventions are not enforced by courts; a breach carries only political consequences (e.g. Liam Fox's resignation over the Ministerial Code). A breach may either kill the convention or, if it provokes a strong reaction, reinforce/codify it (the 1909 Finance Bill → Parliament Act 1911)."},
-{th:"Constitutional Conventions",
+{th:"Constitutional Conventions", tr:"source",
  q:"By convention, the monarch grants Royal Assent because…",
  o:["a statute legally compels the monarch to do so",
     "no monarch is legally allowed to refuse it",
@@ -637,7 +661,7 @@ window.QCM = [
     "the Supreme Court would otherwise strike down the refusal"],
  a:2,
  e:"Legally the monarch may refuse assent and cannot be compelled; by convention it is always given (last refused by Queen Anne in 1708). The classic example of a convention filling a legal gap."},
-{th:"Constitutional Conventions",
+{th:"Constitutional Conventions", tr:"justiciabilite",
  q:"In Re Amendment of the Canadian Constitution (Patriation Reference, 1982), the Supreme Court of Canada held that provincial consent to amend the constitution was required…",
  o:["as a matter of law, enforceable by the courts",
     "as a matter of convention, but not as a matter of law",
@@ -645,7 +669,7 @@ window.QCM = [
     "only if the UK Parliament agreed"],
  a:1,
  e:"Applying Jennings' three tests, the Court found a convention requiring substantial provincial consent — but no legal rule. It illustrates that breach of a convention is political, not legal."},
-{th:"Constitutional Conventions",
+{th:"Constitutional Conventions", tr:"confusion",
  q:"The Ponsonby Rule (a treaty must be laid before Parliament before ratification) was codified in…",
  o:["the Cabinet Manual 2011",
     "the Constitutional Reform and Governance Act 2010",
@@ -653,7 +677,7 @@ window.QCM = [
     "the Fixed-term Parliaments Act 2011"],
  a:1,
  e:"The Ponsonby Rule limits the executive's treaty power and was codified by the Constitutional Reform and Governance Act 2010 — an example of the codification of conventions (alongside the Sewel Convention in the Scotland Act 2016)."},
-{th:"Constitutional Conventions",
+{th:"Constitutional Conventions", tr:"justiciabilite",
  q:"In R (Evans) v Attorney General (2015), the Supreme Court…",
  o:["upheld the government's veto over disclosure of Prince Charles's correspondence",
     "quashed the government's veto, holding the AG could not override a judicial decision merely by disagreeing",
@@ -661,9 +685,53 @@ window.QCM = [
     "ordered Parliament to legislate on royal correspondence"],
  a:1,
  e:"The 'black spider memos' case: after disclosure of the 'advocacy correspondence' was ordered, the government issued a veto certificate; the Supreme Court quashed it. An illustration of the interplay between law and convention (education, cardinal and tripartite conventions)."},
-{th:"The UK Constitution", f:1,
+{th:"The UK Constitution", f:1, tr:"source",
  q:"Following H v Lord Advocate (2012), the Scotland Act 1998 is a constitutional statute that cannot be impliedly repealed.",
  o:["True","False"], a:0,
- e:"Lord Hope confirmed the Scotland Act 1998 is a constitutional statute, extending the Thoburn doctrine beyond the ECA 1972: such statutes can only be repealed by express words."}
+ e:"Lord Hope confirmed the Scotland Act 1998 is a constitutional statute, extending the Thoburn doctrine beyond the ECA 1972: such statutes can only be repealed by express words."},
+
+/* ============ ENTRAÎNEMENT CIBLÉ SUR LES PIÈGES TYPES ============ */
+/* Mêmes mécaniques de pièges que l'annale (confusion / absolu / source / justiciabilité). */
+
+{th:"Parliamentary Supremacy", tr:"confusion",
+ q:"A 'declaration of incompatibility' under the Human Rights Act is…",
+ o:["a ruling by the European Court of Human Rights that the UK has breached the Convention",
+    "a domestic remedy (s.4 HRA) by which a senior UK court states that a provision is incompatible with Convention rights, without affecting its validity",
+    "an order by which a UK court strikes down the incompatible Act",
+    "a certificate by which a minister confirms a bill is Convention-compliant"],
+ a:1,
+ e:"Piège classique : ne pas confondre la déclaration d'incompatibilité (remède INTERNE, s.4 HRA, sans effet sur la validité de la loi) avec un arrêt de la CEDH (international, ex. Hirst). C ferait croire à un pouvoir d'annulation que les juges n'ont pas ; D décrit la 'statement of compatibility' du s.19."},
+{th:"Parliamentary Supremacy", f:1, tr:"absolu",
+ q:"Like any other statute, a constitutional statute (e.g. the ECA 1972 or the Scotland Act 1998) can be impliedly repealed by a later inconsistent Act.",
+ o:["True","False"], a:1,
+ e:"Faux. Le mot « any » est le piège : les constitutional statutes échappent précisément à l'implied repeal (Thoburn, 2002 ; H v Lord Advocate, 2012) et ne peuvent être abrogés que par des express words."},
+{th:"Devolution", tr:"confusion",
+ q:"Under the Scotland Act 1998, the power to make an order preventing a Bill from being submitted for Royal Assent (e.g. used against the Gender Recognition Reform Bill, 2023) belongs to…",
+ o:["the Lord Advocate, under section 33",
+    "the Presiding Officer, under section 32",
+    "the Secretary of State for Scotland, under section 35",
+    "the Attorney General, under section 29"],
+ a:2,
+ e:"Piège « sections » : s.35 = pouvoir du Secretary of State de bloquer la transmission au Royal Assent. À distinguer de s.33 (renvoi d'un Bill à la Cour suprême par les Law Officers pour la compétence) et de s.29 (provisions hors compétence, dont les matières réservées, 'not law')."},
+{th:"Devolution", f:1, tr:"justiciabilite",
+ q:"As a matter of law, the UK Parliament can no longer legislate on matters devolved to Scotland.",
+ o:["True","False"], a:1,
+ e:"Faux. « As a matter of LAW », Westminster reste souverain et peut légiférer sur les matières dévolues (Scotland Act 1998, s.28(7)). Ce n'est qu'« as a matter of CONVENTION » (Sewel) qu'il s'en abstient — et la convention n'est pas justiciable (Miller, 2017)."},
+{th:"Parliamentary Supremacy", tr:"confusion",
+ q:"Under section 2 of the Human Rights Act 1998, in relation to ECtHR case law, UK courts…",
+ o:["are bound to follow it as binding precedent",
+    "must take it into account, but are not bound by it",
+    "must follow only Grand Chamber judgments",
+    "must refer any doubt to the ECtHR for a preliminary ruling"],
+ a:1,
+ e:"Piège « take into account » vs « bound » : le s.2 impose seulement de PRENDRE EN COMPTE la jurisprudence de Strasbourg, sans y être lié, et sans mécanisme de renvoi préjudiciel (à la différence du droit de l'UE)."},
+{th:"The UK Parliament", tr:"confusion",
+ q:"A 'White Paper' is…",
+ o:["a consultation document inviting feedback on tentative proposals",
+    "a Government policy document setting out firm proposals for future legislation",
+    "a document explaining the clauses of a bill to MPs",
+    "the report of a parliamentary select committee"],
+ a:1,
+ e:"Piège Green/White : le White Paper fixe des propositions FERMES de politique en vue d'une loi ; le Green Paper (option A) n'est qu'un document de consultation aux propositions provisoires."}
 
 ];
