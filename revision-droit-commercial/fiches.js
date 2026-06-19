@@ -15,6 +15,7 @@
               | "Titre 2 — Le patrimoine du commerçant"
               | "Titre 4 — Les baux commerciaux"
               | "Titre 5 — L'encadrement de l'activité"
+              | "📜 Articles-clés — …" (fiches centrées article : objet/conditions/effets)
      title  : intitulé de la fiche
      sub    : sous-titre / accroche
      exam   : true  -> déjà tombé en sujet (badge 📌 + refs)
@@ -30,7 +31,10 @@ window.FICHE_PARTS = [
   "Titre 1 — Le commerçant",
   "Titre 2 — Le patrimoine du commerçant",
   "Titre 4 — Les baux commerciaux",
-  "Titre 5 — L'encadrement de l'activité"
+  "Titre 5 — L'encadrement de l'activité",
+  "📜 Articles-clés — Acte de commerce & commerçant",
+  "📜 Articles-clés — Patrimoine & fonds de commerce",
+  "📜 Articles-clés — Baux commerciaux"
 ];
 
 window.FICHES = [
@@ -582,6 +586,241 @@ window.FICHES = [
     { h: "Les pratiques trompeuses (art. L. 121-2 s.)", p: "Reposent sur des **allégations fausses ou de nature à induire en erreur** (sur le produit, le prix, l'identité du professionnel…) ; liste de pratiques **réputées trompeuses en toutes circonstances** (L. 121-4). **Sanctions pénales et administratives.**" },
     { h: "Les pratiques agressives (art. L. 121-6 s.)", p: "Recourent à des **sollicitations répétées et insistantes** ou à une **contrainte** altérant la liberté de choix ; liste de pratiques **réputées agressives** (L. 121-7) ; **sanctions pénales + nullité** du contrat. Encadrement du **démarchage** / vente hors établissement (**droit de rétractation de 14 jours**)." },
     { h: "⚠️ À savoir", p: "Distinguer la **concurrence déloyale** (protège le **commerçant** contre ses concurrents, C. civ.) des **pratiques commerciales déloyales** (protègent le **consommateur**, C. conso.)." }
+  ]
+},
+
+/* =================================================================
+   📜 ARTICLES-CLÉS À CONNAÎTRE — regroupés par article (objet · conditions · effets)
+   ================================================================= */
+
+/* ---- Acte de commerce & commerçant ---- */
+
+{
+  part: "📜 Articles-clés — Acte de commerce & commerçant",
+  title: "Art. L. 110-1 et s. C. com. — Actes de commerce, preuve & prescription",
+  sub: "L'acte de commerce et son régime",
+  exam: true,
+  refs: "Annale · Q1 ; Sujets blancs n°1 & 3 · Q1",
+  blocks: [
+    { h: "L. 110-1 — l'énumération des actes de commerce", p: "Liste les **actes de commerce** : **1°/2°** achat pour revendre (meubles/immeubles) ; **3°, 7°, 8°** intermédiaire, banque, change, paiement ; **4°, 5°, 6°** **entreprises** (manufacture, transport, fourniture, agences, spectacles…) ; **10°** la **lettre de change** (par la forme, entre toutes personnes) ; **11°** (ord. 2021) les **cautionnements de dettes commerciales**." },
+    { h: "Effets du caractère commercial", l: [
+      "soumission au **droit commercial** : preuve libre, **solidarité présumée**, prescription de 5 ans, compétence du **tribunal de commerce** ;",
+      "⚠ un acte **par la forme** (lettre de change) est commercial même isolé, mais **ne confère pas** la qualité de commerçant."
+    ]},
+    { h: "L. 110-3 — la liberté de la preuve", p: "À l'égard des **commerçants**, les actes de commerce se prouvent **par tous moyens** (dispense de l'écrit civil). ⚠ Dans l'**acte mixte**, seul le **non-commerçant** en profite *contre* le commerçant — pas l'inverse (*Cass. com., 12 juin 2019*)." },
+    { h: "L. 110-4 — la prescription quinquennale", p: "Les obligations nées à l'occasion du commerce (entre commerçants, ou commerçant/non-commerçant) se prescrivent par **5 ans** (loi du 17 juin 2008), sauf prescriptions spéciales plus courtes." },
+    { h: "⚠️ À retenir", p: "Critères doctrinaux de commercialité : **spéculation** (Lyon-Caen/Renault) + **circulation des richesses** (Thaller). L'art. **L. 110-2** vise le commerce **maritime**." }
+  ]
+},
+
+{
+  part: "📜 Articles-clés — Acte de commerce & commerçant",
+  title: "Art. L. 121-1 C. com. — La qualité de commerçant",
+  sub: "« Ceux qui exercent des actes de commerce et en font leur profession habituelle »",
+  exam: true,
+  refs: "Sujet blanc n°2 · Q1",
+  blocks: [
+    { h: "Objet de l'article", p: "Définit le **commerçant** : c'est l'**exercice d'actes de commerce à titre professionnel** qui emporte la qualité — un acte isolé ne suffit pas." },
+    { h: "Conditions", l: [
+      "une **profession habituelle** = **habitude** (répétition dans la durée, appréciation souveraine des juges) + **caractère professionnel** (moyens de subsistance, profession principale) ;",
+      "l'**indépendance** : agir **en son nom, pour son propre compte, à ses risques et périls** (exclut salariés, VRP, **agents commerciaux** — art. L. 134-1)."
+    ]},
+    { h: "Effets", l: [
+      "application du **statut** de commerçant (obligations : immatriculation, comptabilité ; droits : propriété commerciale, baux commerciaux) ;",
+      "à distinguer de l'**artisan** (civil, < 11 salariés) et de l'**agriculteur** (civil, cycle biologique, art. L. 311-1 C. rural)."
+    ]},
+    { h: "⚠️ À retenir", p: "**Commercialité de fait** : la qualité peut être reconnue **sans immatriculation** → toutes les **obligations**, mais pas les **droits**." }
+  ]
+},
+
+{
+  part: "📜 Articles-clés — Acte de commerce & commerçant",
+  title: "Art. L. 123-1 et s. C. com. — RCS, comptabilité & preuve",
+  sub: "Les obligations de publicité et de comptabilité du commerçant",
+  exam: true,
+  refs: "Sujet blanc n°5 · Q2",
+  blocks: [
+    { h: "L. 123-1 s. — le RCS : objet", p: "Le **registre du commerce et des sociétés**, tenu par le greffe (centralisé à l'INPI puis au **RNE**), assure l'**information des tiers** sur les commerçants et les sociétés." },
+    { h: "Conditions d'immatriculation", l: [
+      "**qui** : personnes physiques **commerçantes**, sociétés et GIE (personnalité morale)… ;",
+      "**délai** : **15 jours** du début d'activité (personnes physiques) ; immatriculation **personnelle** (une principale, secondaires possibles) ; contrôle du greffier, mention au **BODACC**."
+    ]},
+    { h: "Effets de l'immatriculation", l: [
+      "**personnes physiques** → **présomption simple** de commercialité (combattue par les tiers de **bonne foi**) ;",
+      "**personnes morales** → **acquisition de la personnalité morale** (règle de fond) ;",
+      "**opposabilité aux tiers** (**L. 123-9**) : les faits sujets à mention ne sont opposables que s'ils sont **publiés** ;",
+      "défaut d'immatriculation → **commerçant de fait** (les obligations, pas les droits)."
+    ]},
+    { h: "L. 123-12 s. — les obligations comptables", l: [
+      "**livre-journal** + **grand livre** ; **comptes annuels** (bilan, compte de résultat, annexe) ; comptes **réguliers, sincères, image fidèle** (**L. 123-14**) ; conservation **10 ans** ;",
+      "**preuve** : la comptabilité régulière fait foi **entre commerçants** (**L. 123-23**) ; les registres font preuve **contre leur auteur** (art. 1378 C. civ.)."
+    ]},
+    { h: "⚠️ À jour (2023)", p: "Depuis le **1ᵉʳ janvier 2023**, le **RNE** (ord. 15 sept. 2021) se substitue à plusieurs registres (répertoire des métiers, registre de l'agriculture…). **Les RCS locaux subsistent.**" }
+  ]
+},
+
+{
+  part: "📜 Articles-clés — Acte de commerce & commerçant",
+  title: "Art. L. 134-1 C. com. — L'agent commercial",
+  sub: "Un mandataire indépendant… mais non-commerçant",
+  exam: false,
+  blocks: [
+    { h: "Objet", p: "L'agent commercial est un **mandataire** qui, à titre de **profession indépendante**, est chargé **de façon permanente** de négocier et, éventuellement, de conclure des contrats **au nom et pour le compte** d'autrui." },
+    { h: "Conditions / régime", l: [
+      "activité **civile** : il n'est **pas commerçant** (preuve par tous moyens *interdite* contre lui ; clauses attributives de compétence sans effet) ;",
+      "la **négociation** est essentielle à la qualification (*Cass. com., 15 janv. 2008*) ; statut protecteur : **indemnité de rupture** (art. L. 134-12)."
+    ]},
+    { h: "⚠️ À distinguer", p: "À ne pas confondre avec le **VRP** (salarié) ni le **commissionnaire** (commerçant, agit en son nom propre). Contentieux fréquent de **requalification**." }
+  ]
+},
+
+{
+  part: "📜 Articles-clés — Acte de commerce & commerçant",
+  title: "Art. L. 210-1 C. com. — Les sociétés commerciales par la forme",
+  sub: "Commerciales par leur forme, quel que soit leur objet",
+  exam: true,
+  refs: "Sujet blanc n°1 · Q1",
+  blocks: [
+    { h: "Objet", p: "Sont commerciales **à raison de leur forme et quel que soit leur objet** : **SNC, SCS, SARL** et **sociétés par actions** (SA, SCA, SAS, SE)." },
+    { h: "Effets", l: [
+      "tous les actes de leur cadre (création, fonctionnement, dissolution, titres) sont **commerciaux** → **tribunal de commerce** ;",
+      "la commercialité s'attache à la **personne morale**, même si l'objet est civil."
+    ]},
+    { h: "⚠️ Distinction société / associé", p: "Seuls les **associés de SNC** sont commerçants. Les associés de **SARL/SA** et les **dirigeants** ne le sont **pas**. Cas particulier : les **SEL** (forme commerciale, **objet civil**)." }
+  ]
+},
+
+/* ---- Patrimoine & fonds de commerce ---- */
+
+{
+  part: "📜 Articles-clés — Patrimoine & fonds de commerce",
+  title: "Art. 2284 C. civ. — Le droit de gage général",
+  sub: "Le fondement de l'unité du patrimoine (Aubry et Rau)",
+  exam: false,
+  blocks: [
+    { h: "Objet", p: "« Quiconque s'est obligé personnellement est tenu de remplir son engagement **sur tous ses biens**, mobiliers et immobiliers, présents et à venir. » → **unité du patrimoine** : tout l'actif répond de tout le passif." },
+    { h: "Conséquence pour le commerçant", p: "Ses biens **personnels et professionnels** sont confondus et répondent indistinctement de toutes ses dettes → risque d'absorption du patrimoine privé." },
+    { h: "Les palliatifs", l: [
+      "société à risque limité (EURL, SASU) ; loi **Madelin** (1994) ;",
+      "**insaisissabilité** de la résidence principale (L. 526-1) ; statut de l'**entrepreneur individuel** (L. 526-22) ; **fiducie**."
+    ]}
+  ]
+},
+
+{
+  part: "📜 Articles-clés — Patrimoine & fonds de commerce",
+  title: "Art. L. 526-1 et s. C. com. — Insaisissabilité & entrepreneur individuel",
+  sub: "Protéger le patrimoine personnel du chef d'entreprise",
+  exam: true,
+  refs: "Sujets blancs n°3 (Q2) & n°6 (Q2)",
+  blocks: [
+    { h: "L. 526-1 — l'insaisissabilité de la résidence principale", p: "La **résidence principale** est insaisissable **de plein droit, sans formalité** (loi Macron 2015), à l'égard des **créanciers professionnels** (créances nées après le 7 août 2015). Construction : lois **Dutreil** (2003), **LME** (2008), **Macron** (2015). Les **autres biens fonciers** non professionnels : par **déclaration notariée d'insaisissabilité (DNI)**, à peine de nullité, publiée." },
+    { h: "Effets / limites (insaisissabilité)", l: [
+      "**report** sur le prix en cas de cession (remploi dans l'année) ; **renonciation** possible (acte authentique) ;",
+      "**procédure collective** : le liquidateur peut **contester l'opposabilité** de la DNI (*Cass. com., 15 nov. 2016*)."
+    ]},
+    { h: "L. 526-22 s. — le statut de l'entrepreneur individuel", p: "Depuis le **15 mai 2022** (loi du 14 févr. 2022, remplace l'EIRL), l'EI dispose **de plein droit, sans formalité**, d'un **patrimoine professionnel** (biens *utiles*, art. R. 526-26) et d'un **patrimoine personnel**." },
+    { h: "Étanchéité & exceptions (EI)", l: [
+      "**créanciers professionnels** → patrimoine professionnel ; **créanciers personnels** → patrimoine personnel ;",
+      "**renonciation** pour un engagement spécifique (**L. 526-25**) ; **créanciers privilégiés** (fisc/social) en cas de **fraude** (**L. 526-24**) ; **réunion** des patrimoines en cas de cessation/décès."
+    ]}
+  ]
+},
+
+{
+  part: "📜 Articles-clés — Patrimoine & fonds de commerce",
+  title: "Art. L. 141-5 et s. C. com. — Cession du fonds : privilège, publicité & opposition",
+  sub: "Garanties du vendeur et protection des créanciers",
+  exam: true,
+  refs: "Sujet blanc n°4 · Q2",
+  blocks: [
+    { h: "L. 141-5 / L. 141-6 — le privilège du vendeur", l: [
+      "garantit le prix non payé comptant ; suppose un **prix sectionné en trois** (incorporels / matériel / marchandises) ;",
+      "**inscription** dans les **30 jours** (à peine d'**inopposabilité** depuis 2023) ; à défaut de désignation, porte sur les seuls **éléments incorporels** ;",
+      "**droit de préférence** + **droit de suite** ; **action résolutoire** (L. 141-6, à réserver dans l'inscription) : anéantit la vente."
+    ]},
+    { h: "L. 141-12 s. — la publicité de la cession", p: "**Enregistrement** dans le mois + publicité (annonces légales + **BODACC**) → rend la cession **opposable aux tiers**. **Information préalable des salariés** (loi ESS 2014, 2 mois avant) — sanction = **amende civile** (≤ 2 %)." },
+    { h: "L. 141-17 — l'opposition au prix", p: "Tout créancier du vendeur peut, dans les **10 jours**, faire **opposition au paiement du prix** → le prix est **bloqué**. ⚠ L'acquéreur qui paie malgré l'opposition (ou en l'absence de publicité) risque de **payer deux fois**." }
+  ]
+},
+
+{
+  part: "📜 Articles-clés — Patrimoine & fonds de commerce",
+  title: "Art. L. 142-1 et s. C. com. — Le nantissement du fonds de commerce",
+  sub: "Affecter le fonds en garantie, sans dépossession",
+  exam: false,
+  blocks: [
+    { h: "Objet", p: "Sûreté permettant d'**affecter le fonds en garantie** d'une dette **sans dépossession** (le commerçant continue d'exploiter). Conventionnel ou judiciaire (loi du 17 mars 1909)." },
+    { h: "Conditions / assiette", l: [
+      "ne peut porter que sur le **fonds** (jamais sur les **marchandises** ni les **immeubles**) ; à défaut de désignation, sur les seuls **éléments incorporels** ;",
+      "acte écrit enregistré ; **inscription** dans les 30 jours (à peine d'inopposabilité depuis 2023)."
+    ]},
+    { h: "Effets", l: [
+      "**droit de préférence** + **droit de suite** ; mais **pas** de droit de rétention ni d'attribution du fonds (*Cass. com., 13 oct. 1998*) ;",
+      "le créancier peut faire **vendre** le fonds à défaut de paiement."
+    ]}
+  ]
+},
+
+{
+  part: "📜 Articles-clés — Patrimoine & fonds de commerce",
+  title: "Art. L. 144-1 et s. C. com. — La location-gérance",
+  sub: "Concéder l'exploitation du fonds à un gérant",
+  exam: true,
+  refs: "Sujet blanc n°2 · Q2",
+  blocks: [
+    { h: "Objet", p: "Contrat par lequel le propriétaire d'un fonds en **concède la location** à un **gérant** qui l'exploite **à ses risques et périls**. Qualification d'**ordre public**." },
+    { h: "Conditions", l: [
+      "existence d'un **fonds** (donc d'une **clientèle**, appréciée à la date du contrat ; preuve à la charge du loueur — sinon nullité/requalification) ;",
+      "le **gérant** est commerçant (immatriculation) ; **publicité** sous 15 jours ;",
+      "⚠ depuis la **loi du 19 juill. 2019**, la condition d'**exploitation personnelle préalable (2 ans)** est **supprimée**."
+    ]},
+    { h: "Effets", l: [
+      "le gérant exploite « en bon commerçant », paie la **redevance**, restitue le fonds → **pas de renouvellement** ;",
+      "tiers : **solidarité légale** du loueur jusqu'à la **publication** (**L. 144-7**) ; **déchéance du terme** des dettes en fin de contrat (**L. 144-9**)."
+    ]}
+  ]
+},
+
+/* ---- Baux commerciaux ---- */
+
+{
+  part: "📜 Articles-clés — Baux commerciaux",
+  title: "Art. L. 145-1 et s. C. com. — Le statut des baux commerciaux",
+  sub: "« Propriété commerciale » : conditions, exécution & fin du bail",
+  exam: true,
+  refs: "Annale · Q3 ; Sujets blancs n°1 à 6",
+  blocks: [
+    { h: "L. 145-1 s. — champ d'application (ordre public)", l: [
+      "un **bail** + un **immeuble/local** (espace **stable et permanent** — *Cass. 3e civ., 20 mars 2014*) + l'exploitation d'un **fonds** (clientèle propre, autonomie de gestion) + l'**immatriculation** (appréciée à la **date de la demande en justice** — *Cass. 3e civ., 22 janv. 2014*) ;",
+      "statut d'**ordre public** : clauses contraires **réputées non écrites** (L. 145-15) ; **soumission conventionnelle** possible."
+    ]},
+    { h: "L. 145-5 & L. 145-5-1 — les baux exclus", l: [
+      "**bail dérogatoire** : ≤ **3 ans** ; ⚠ si maintien en possession au-delà → **bail soumis au statut** (*Cass. 3e civ., 26 mars 2020*) ;",
+      "**convention d'occupation précaire** : cause objective de précarité, **pas un bail** (*Cass. 3e civ., 19 nov. 2014*)."
+    ]},
+    { h: "L. 145-4 — durée & résiliation triennale", p: "Durée minimale **9 ans** ; **résiliation triennale** du preneur (d'**ordre public**). Plus de baux « **fermes** » (loi Pinel) — sauf baux > 9 ans, locaux monovalents, bureaux, locaux de stockage." },
+    { h: "L. 145-33 / 34 / 38 — le loyer", l: [
+      "loyer = **valeur locative** (L. 145-33), dans la limite du **plafonnement** (indice ILC/ILAT, révision triennale L. 145-38) ;",
+      "**déplafonnement** si modification des **facteurs locaux de commercialité** (> 10 %) → valeur locative, **lissage 10 %/an** (Pinel) ; **clause-recette** hors révision légale (*Cass. 3e civ., 29 nov. 2018*)."
+    ]},
+    { h: "L. 145-47 & L. 145-48 — la déspécialisation", l: [
+      "**simple** : activités **connexes/complémentaires**, sur **notification** (L. 145-47, ordre public) ;",
+      "**plénière** : activité **différente**, avec **accord du bailleur** (L. 145-48 ; tribunal si refus non justifié)."
+    ]},
+    { h: "L. 145-41 — la clause résolutoire", p: "Ne produit effet qu'**un mois après un commandement** demeuré infructueux (disposition d'**ordre public**) ; le juge peut accorder des **délais** (art. 1343-5 C. civ.) et suspendre ses effets." },
+    { h: "L. 145-8 s. — le droit au renouvellement", l: [
+      "**immatriculation** + **exploitation effective** du fonds (3 ans) ; **congé** 6 mois à l'avance ; silence du bailleur (3 mois) = acceptation ;",
+      "**bail renouvelé** : 9 ans, identique **sauf le loyer**."
+    ]},
+    { h: "L. 145-14 & L. 145-17 — l'indemnité d'éviction", l: [
+      "refus de renouvellement = **indemnité d'éviction** = préjudice (**valeur du fonds** + frais), **droit de repentir** (L. 145-58) ;",
+      "**éviction justifiée sans indemnité** (L. 145-17) : motif grave et légitime, ou immeuble insalubre à démolir."
+    ]},
+    { h: "L. 145-16 & L. 145-31 — cession & sous-location", l: [
+      "**cession du bail avec le fonds** : clauses d'interdiction **réputées non écrites** (agrément/garanties possibles) ;",
+      "**sous-location** **interdite** sauf accord du bailleur (appelé à concourir) ; la **location-gérance** n'est pas une sous-location prohibée."
+    ]}
   ]
 }
 
