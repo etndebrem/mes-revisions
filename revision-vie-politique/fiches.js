@@ -15,6 +15,7 @@
    ===================================================================== */
 
 window.FICHE_PARTS = [
+  "Sujets d'examen",
   "Introduction",
   "L'État & les gouvernants",
   "Les partis politiques",
@@ -23,6 +24,225 @@ window.FICHE_PARTS = [
 ];
 
 window.FICHES = [
+
+/* =================================================================
+   SUJETS D'EXAMEN — réflexion /12 + cours /8 (corrigés condensés)
+   Enjeux · Éléments théoriques · Citations · Cours · Piège à éviter
+   ================================================================= */
+{
+  part: "Sujets d'examen",
+  title: "Sujet 8 — Le cadre de la vie politique",
+  sub: "Réflexion : la vie politique se réduit-elle au cadre constitutionnel et institutionnel ?",
+  blocks: [
+    { h: "Enjeux de la question", p: "Définir *vie politique* (Burdeau, Weber) et *cadre constitutionnel* (la « face officielle »). Thèse : le droit est le **point de départ** de la vie politique mais ne l'**épuise pas**, sans être négligeable. Formule-pivot : le droit n'est *« ni impuissant, ni tout-puissant »*." },
+    { h: "Éléments théoriques", l: [
+      "Le cadre **structure** : la Ct de 1958 (rationalisation) et la révision de **1962** (SUD) ont stabilisé un jeu politique anarchique.",
+      "Mais il **n'absorbe pas tout** : pluralisme et conflictualité. Ex. le régime présidentiel américain ne se comprend qu'avec des facteurs *extra-constitutionnels* (primaires, bipartisme, médias).",
+      "Trois **décalages** : souveraineté relativisée par l'UE ; le « peuple un » = fiction juridique ; séparation des pouvoirs minée par l'argent et les réseaux.",
+      "La **science politique** (1879) décrit ce que le juriste formaliste ignore ; le **champ** (Bourdieu) et le phénomène **partisan** (art. 4, fait majoritaire) le prouvent."
+    ]},
+    { h: "Citations à ne pas manquer", l: [
+      "**Rémond** : *« les pouvoirs régulièrement institués n'absorbent jamais toutes les forces d'une société ».*",
+      "**Duverger** : *« qui ignore le rôle des partis n'a qu'une vue fausse des régimes ».*",
+      "**Burdeau** : *« des hommes qui commandent, d'autres qui obéissent ».*"
+    ]},
+    { h: "Question de cours (/8)", p: "**Comment Weber définit-il la politique et l'État ?** La politique = *« chercher à participer au pouvoir ou à influer sur sa répartition »* (1919). L'État = *« le monopole de la violence physique légitime »* : il exproprie la justice privée et s'appuie sur la contrainte **+ un discours de légitimation**." },
+    { h: "⚠️ Piège à éviter", p: "Le **« champ »** (lutte / force) est de **Bourdieu**, pas de Weber. Et n'oublie pas la moitié **« politique »** de la définition wébérienne (pas seulement l'État)." }
+  ]
+},
+{
+  part: "Sujets d'examen",
+  title: "Sujet 9 — L'État & le monopole de la direction politique",
+  sub: "Réflexion : l'État a-t-il perdu le monopole de la direction politique ?",
+  blocks: [
+    { h: "Enjeux de la question", p: "Distinguer le *monopole de la violence légitime* (la contrainte) de la *direction politique* (orienter, conduire). Thèse : l'État n'a pas tant **perdu** ce monopole qu'il l'a **transformé** — d'une *puissance de direction* à une *autorité de régulation*." },
+    { h: "Éléments théoriques", l: [
+      "**Gouvernement → gouvernance** (sociologie des organisations, années 1990) : régulation entre acteurs publics/privés à plusieurs niveaux.",
+      "Dimension **supranationale** : souveraineté relativisée par l'UE, l'OTAN, l'internationalisation — l'État n'est plus le seul échelon de décision.",
+      "Contre-pouvoirs internes : partis et médias structurent l'agenda (foulard de Creil 1989, immigration/FN) ; poids de l'argent (lobbying, concentration des médias).",
+      "Mais l'État **garde** le monopole de la contrainte et l'impulsion normative (~75 % de projets de loi) : il régule plutôt qu'il ne dirige."
+    ]},
+    { h: "Citations à ne pas manquer", l: [
+      "**Mansfield Jr** : le *« prince apprivoisé »* — l'exécutif, héritier du pouvoir royal, reste contrôlé.",
+      "**Rémond** : *« les pouvoirs régulièrement institués n'absorbent jamais toutes les forces d'une société ».*"
+    ]},
+    { h: "Question de cours (/8)", p: "**Définition sociopolitique de l'État (Weber) + triple processus.** *« Entreprise politique dont la direction administrative revendique le monopole de la contrainte physique légitime »* (Économie et société, 1921), par-delà la définition juridique (Carré de Malberg). Triple processus : **différenciation, concentration, institutionnalisation**." },
+    { h: "⚠️ Piège à éviter", p: "Ne pas oublier le concept **central** : *gouvernement → gouvernance*. Et traiter la dimension **supranationale (UE)**, pas seulement les contre-pouvoirs internes." }
+  ]
+},
+{
+  part: "Sujets d'examen",
+  title: "Sujet 10 — Du règne de la discussion au règne de l'action",
+  sub: "Réflexion : le « règne de l'action » a-t-il définitivement supplanté le « règne de la discussion » ?",
+  blocks: [
+    { h: "Enjeux de la question", p: "*Discussion* = État parlementaire (délibération) ; *action* = État exécutif (efficacité). Thèse : l'action l'a **durablement** emporté, mais **non définitivement** — la discussion resurgit dès que la majorité fait défaut." },
+    { h: "Éléments théoriques", l: [
+      "Le basculement répond à un besoin d'**efficacité** (guerre, crises, État-providence).",
+      "Sous la Ve : parlementarisme rationalisé, fait majoritaire, ~75 % de projets de loi ; le Parlement **contrôle** (motion de censure, art. 49 al. 2), il n'**impulse** plus.",
+      "Mais c'est un **idéal-type** : l'exécutif reste un « prince apprivoisé » ; depuis **2022** (sans majorité absolue : 49.3, motions de censure), la **négociation** revient."
+    ]},
+    { h: "Citations à ne pas manquer", l: [
+      "**Capitant** : *« gouverner, c'est légiférer ».*",
+      "**Roussellier** (*La Force de gouverner*, 2015) : la *« disqualification de la méthode parlementaire ».*",
+      "**Mirkin-Guetzévitch** (1928) : la *rationalisation du parlementarisme*.",
+      "**Mansfield** : le *« prince apprivoisé ».*"
+    ]},
+    { h: "Question de cours (/8)", p: "**Le modèle de l'État parlementaire et ses 3 axes (vs l'État monarchique).** Définition : centre d'impulsion = le Parlement. Trois axes : pouvoir **impersonnel** (vs personnel/héréditaire) ; pouvoir **public** (vs occulte) ; **règne de la loi** (vs arbitraire), art. 6 DDHC." },
+    { h: "⚠️ Piège à éviter", p: "La motion de censure = **art. 49 al. 2** (« 49-4 » n'existe pas ; le 49.3 = adoption sans vote). En cours, **définis le modèle** avant d'énoncer les 3 axes." }
+  ]
+},
+{
+  part: "Sujets d'examen",
+  title: "Sujet 11 — Du notable au tribun",
+  sub: "Réflexion : pourquoi le gouvernement des notables a-t-il laissé place au règne des tribuns ?",
+  blocks: [
+    { h: "Enjeux de la question", p: "*Notable* (prestige social, fortune locale, censitaire) vs *tribun* (orateur, professions libérales). Thèse : la démocratisation du suffrage et les mutations de la société privent le notable de ses appuis et valorisent l'orateur — mais le pouvoir reste à une élite (oligarchie renouvelée)." },
+    { h: "Éléments théoriques", l: [
+      "**Politisation populaire** : SUD **1848**, campagnes, lois de **1881** (presse, réunion) ; le combat passe d'une conquête de *statut* à une conquête de *conviction*.",
+      "**Mutations socio-économiques** : urbanisation / exode rural ; **liberté syndicale (1884)** qui rompt la dépendance économique ; **lois Ferry** (instruction, laïcité) qui sapent l'appui clérical des notables.",
+      "**Renouvellement du personnel** : dès **1879**, professions libérales (« république des avocats », ~2/3 des parlementaires) ; professionnalisation (mandat rémunéré, groupes parlementaires reconnus en 1910)."
+    ]},
+    { h: "Citations à ne pas manquer", l: [
+      "Figures du tribun : **Gambetta, Clemenceau, Waldeck-Rousseau, Briand**.",
+      "**Siegfried** : l'élection du notable = *« la ratification de l'autorité sociale évidente ».*"
+    ]},
+    { h: "Question de cours (/8)", p: "**La figure du tribun et les 3 facteurs (IIIe Rép.).** Le tribun = l'orateur qui emporte la conviction à la tribune (la délibération est au cœur du régime). Facteurs : politisation populaire / mutations socio-économiques / renouvellement du personnel." },
+    { h: "⚠️ Piège à éviter", p: "La *« noblesse d'État »* (Bourdieu) désigne les **énarques de la Ve**, pas les notables du XIXe (anachronisme). En cours, **ne recopie pas** la réflexion : structure les **3 facteurs**." }
+  ]
+},
+{
+  part: "Sujets d'examen",
+  title: "Sujet 12 — La technocratie",
+  sub: "Réflexion : la technocratie est-elle l'accomplissement ou la dénaturation de la démocratie représentative ?",
+  blocks: [
+    { h: "Enjeux de la question", p: "Sujet **dialectique** : traiter les **deux** branches. *Technocratie* = gouvernement des techniciens (compétence) ; *démocratie représentative* = mandat délégué et libre. Thèse : la technocratie est l'**aboutissement** de la logique d'efficacité, mais au prix d'un **déficit de représentativité**." },
+    { h: "Éléments théoriques", l: [
+      "**Accomplissement** : différenciation / professionnalisation (Durkheim, Sieyès, Weber) ; demande d'efficacité (État exécutif, État-providence) ; de Gaulle contre le « funeste régime des partis ».",
+      "**Dénaturation** : voie royale Sciences Po / ENA, homogénéité (CSP+ : 81,5 % → 67 % depuis 2022), « noblesse d'État » (Bourdieu), parachutage / pantouflage, expert vs profane, rupture (Gilets jaunes, retraites)."
+    ]},
+    { h: "Citations à ne pas manquer", l: [
+      "**Bourdieu** : la *« noblesse d'État »* (élite énarque, esprit de corps).",
+      "**Weber** : vivre *« pour »* et *« de »* la politique (professionnalisation).",
+      "**De Gaulle** : le *« funeste régime des partis ».*"
+    ]},
+    { h: "Question de cours (/8)", p: "**La figure du technicien et l'inversion du cursus honorum.** Technicien = promu pour sa compétence (maîtrise des dossiers). Inversion : on entre au sommet par Sciences Po / ENA (créées à la Libération, **1945**) et la haute administration, au lieu de monter du local au national. Repères : **art. 23** (incompatibilité), **1958** (Debré ; Pompidou jamais élu)." },
+    { h: "⚠️ Piège à éviter", p: "Le sujet est un *« accomplissement **OU** dénaturation »* : ne traite pas **qu'une seule** branche. Ici, *« noblesse d'État »* est **bien** employé (énarques)." }
+  ]
+},
+{
+  part: "Sujets d'examen",
+  title: "Sujet 13 — Les femmes & la vie politique",
+  sub: "Réflexion : comment expliquer la persistance du « gender gap » dans la vie politique française ?",
+  blocks: [
+    { h: "Enjeux de la question", p: "Le *gender gap* persiste **malgré** l'égalité de droit (vote en 1944). Trois explications : socialisation tardive, **mode de scrutin** (la parité ne « mord » qu'au scrutin de liste), résistances culturelles." },
+    { h: "Éléments théoriques", l: [
+      "**Socialisation tardive** : vote refusé dès la Révolution (crainte d'un vote conservateur / catholique, dépendance civile) ; ordonnance du **21 avril 1944**. Retard sur l'Allemagne.",
+      "**Le ressort institutionnel (clé)** : la parité (révision de **1999** + lois) impose l'alternance F/H aux **scrutins de liste** (42 % de députées depuis 2017, quasi-parité aux locales) ; elle reste impuissante au scrutin **uninominal** et dans les **exécutifs** (13 % en 2012). C'est un écart de **pouvoir**.",
+      "**Résistances culturelles** : discours dégradant (« hystérique »), mise en cause de la compétence des femmes (Viktorovitch).",
+      "Chronologie : **1936** (3 sous-secrétaires, gouvernement Blum) → **1944** (vote) → **1945** (AN) → **1946** (Sénat) → **1947** (Poinso-Chapuis) → **1991** (Cresson)."
+    ]},
+    { h: "Citations à ne pas manquer", l: [
+      "**Ordonnance du 21 avril 1944** : droit de vote des femmes (refusé depuis la Révolution).",
+      "**Révision constitutionnelle de 1999** + lois sur la parité : alternance F/H aux scrutins de liste."
+    ]},
+    { h: "Question de cours (/8)", p: "**Les étapes, du refus révolutionnaire à la parité.** Refus dès la Révolution → 1944 (vote) → 1945/46 (AN / Sénat) → 1947 (1re ministre de plein exercice) → 1991 (1re Première ministre) → **parité** (1999 + lois) : alternance aux scrutins de liste, écart persistant dans les exécutifs." },
+    { h: "⚠️ Piège à éviter", p: "Le ressort **central** est institutionnel (parité × mode de scrutin) — ne te limite pas aux résistances culturelles. Et en cours, va **jusqu'à la parité** (ne t'arrête pas à Cresson)." }
+  ]
+},
+{
+  part: "Sujets d'examen",
+  title: "Sujet 14 — Partis & régime politique",
+  sub: "Réflexion : pour comprendre un régime politique, le système de partis compte-t-il davantage que la Constitution ?",
+  blocks: [
+    { h: "Enjeux de la question", p: "Arbitrer le *« davantage »*. Thèse : ni l'un ni l'autre seul — c'est leur **interaction** ; mais sans le système de partis, la lecture constitutionnelle est *« une vue fausse »* (Duverger)." },
+    { h: "Éléments théoriques", l: [
+      "La Ct **ignore** largement les partis (reconnaissance tardive, art. 4) ; or ils commandent la pratique (fait majoritaire, présidentialisation).",
+      "**Preuve** : même Constitution, régimes différents — présidentialisme / cohabitation (**1962-2022**), tripartition inqualifiable depuis **2022**.",
+      "**Réciprocité** : la Ct façonne aussi les partis (scrutin majoritaire à 2 tours, SUD 1962 → bipolarisation)."
+    ]},
+    { h: "Citations à ne pas manquer", l: [
+      "**Duverger** : *« qui ignore le rôle des partis n'a qu'une vue fausse des régimes »* ; l'étude des partis = *« fil d'Ariane ».*",
+      "**Duverger** : systèmes **majoritaires** vs **non-majoritaires**."
+    ]},
+    { h: "Question de cours (/8)", p: "**Les effets du bipartisme : R-U vs USA.** Deux effets : **convergence** (un parti tient exécutif + législatif) ou **rigidification** (organes tenus par des partis différents). R-U = **fusion** des pouvoirs (Bagehot, Westminster, Whips). USA = **convergence limitée** (« parlementarisme de couloir » ; mais midterms → gouvernement divisé = rigidification)." },
+    { h: "⚠️ Piège à éviter", p: "Le bipartisme structure les modèles **britannique et américain** (≠ « européen » : l'Europe continentale est multipartiste). Côté USA, ne pas oublier le **second effet** (rigidification)." }
+  ]
+},
+{
+  part: "Sujets d'examen",
+  title: "Sujet 15 — Le sens de l'élection",
+  sub: "Réflexion : l'élection est-elle, par nature, un mécanisme démocratique ?",
+  blocks: [
+    { h: "Enjeux de la question", p: "Thèse : l'élection n'est **pas** démocratique par nature — elle fut un instrument **aristocratique** de sélection des « meilleurs » — et ne l'est devenue que par le suffrage universel et le sens qu'on lui a donné." },
+    { h: "Éléments théoriques", l: [
+      "**Origine aristocratique** (Manin) : suffrage censitaire, vote à deux degrés ; l'élection reproduit une autorité sociale.",
+      "**Démocratisation (1848)** : volonté souveraine ; isoloir, marché électoral (Schumpeter), vote de programme (Guesde).",
+      "**Limites persistantes** : mandat **libre**, « cens caché » (Gaxie), re-personnalisation (Burdeau) → *« aristocratie élective ».*"
+    ]},
+    { h: "Citations à ne pas manquer", l: [
+      "**Manin** (*Principes du gouvernement représentatif*) : l'élection, mécanisme aristocratique.",
+      "**Schumpeter** (1942) : le *« marché électoral ».*",
+      "**Gaxie** : le *« cens caché ».*"
+    ]},
+    { h: "Question de cours (/8)", p: "**L'évolution du sens politique de l'élection.** Sélection aristocratique des « meilleurs » (XVIIIe, censitaire) → **1848** : expression d'une volonté souveraine (« démocratie électorale ») → re-personnalisation contemporaine (Burdeau, « société de l'image »)." }
+  ]
+},
+{
+  part: "Sujets d'examen",
+  title: "Sujet 16 — Le référendum",
+  sub: "Réflexion : le référendum est-il un instrument de démocratie ou de pouvoir personnel ?",
+  blocks: [
+    { h: "Enjeux de la question", p: "Outil **ambivalent** : conçu pour la souveraineté populaire, il a souvent servi le **pouvoir personnel** (plébiscite), d'où sa **désuétude** actuelle." },
+    { h: "Éléments théoriques", l: [
+      "**Dérive plébiscitaire** : les deux Napoléon ; la IIIe Rép. le proscrit 75 ans.",
+      "**Usage gaullien** : restauré en **1958** pour légitimer l'État face aux partis ; mais aussi pour court-circuiter le Parlement (échec de **1969** → départ).",
+      "**Désuétude** : 9 usages en 67 ans, rien depuis **2005**. Causes : légitimité présidentielle (SUD + quinquennat), risque du vote-sanction, traumatisme de 2005."
+    ]},
+    { h: "Citations à ne pas manquer", l: [
+      "**1969** : échec → départ de De Gaulle (le spectre du vote-sanction).",
+      "**2005** : rejet du traité constitutionnel européen malgré une majorité parlementaire favorable."
+    ]},
+    { h: "Question de cours (/8)", p: "**L'évolution du référendum sous la Ve + sa désuétude.** Restauration gaullienne (1958) → déclin (plus rien depuis 2005). Trois facteurs : légitimité présidentielle, risque politique, traumatisme de 2005. (RIP, art. 11 ; référendum local, art. 72-1, 2003.)" }
+  ]
+},
+{
+  part: "Sujets d'examen",
+  title: "Sujet 17 — La société civile (Tocqueville)",
+  sub: "Réflexion : les corps intermédiaires sont-ils le seul rempart contre le despotisme démocratique ?",
+  blocks: [
+    { h: "Enjeux de la question", p: "Thèse : chez Tocqueville, l'association est le rempart **décisif** (sur les mœurs) contre la tyrannie de la majorité — mais **non le seul** (élection, presse, séparation des pouvoirs), et la France l'a longtemps **refoulé**." },
+    { h: "Éléments théoriques", l: [
+      "**Le danger** : égalisation des conditions → individualisme → atomisation → *« tyrannie de la majorité » / « despotisme démocratique ».*",
+      "**Le remède** : l'association recrée du lien collectif (fonctions de **relais** et de **tampon**).",
+      "**La méfiance française** : Le Chapelier (1791), « société partielle » (Rousseau), « individualisme étatiste » (Jaurès) ; reconnaissance tardive (1884, 1901) ; encadrement actuel (RUP, dissolution, contrat d'engagement républicain 2021)."
+    ]},
+    { h: "Citations à ne pas manquer", l: [
+      "**Tocqueville** : *« l'art de l'association est la science mère des sociétés démocratiques ».*",
+      "**Le Chapelier** (1791) : *« il n'y a plus que l'intérêt particulier de chaque individu et l'intérêt général ».*",
+      "**Locke** : l'État, simple **mandataire** de la société."
+    ]},
+    { h: "Question de cours (/8)", p: "**Tocqueville : égalisation → individualisme → tyrannie de la majorité, et le rôle des instances de médiation.** L'égalité engendre l'individualisme et l'atomisation ; l'individu isolé ne résiste plus à la majorité (despotisme démocratique) ; seules les instances de médiation (relais + tampon) recréent du collectif." }
+  ]
+},
+{
+  part: "Sujets d'examen",
+  title: "Sujet 18 — L'opinion publique",
+  sub: "Réflexion : peut-on parler d'« une » opinion publique ?",
+  blocks: [
+    { h: "Enjeux de la question", p: "Thèse : il faut parler **DES** opinions publiques — une opinion unique est une **construction**, voire une illusion entretenue par ses vecteurs (médias, sondages)." },
+    { h: "Éléments théoriques", l: [
+      "**Une force diffuse** : inorganisée, mobile, anonyme ; elle n'existe que par la **communication** ; plurielle par nature.",
+      "**Une opinion fabriquée** : *« médiatisée »* (ORTF → concentration : Bolloré, Arnault) ; le sondage produit l'image d'une majorité.",
+      "**Le numérique** : distorsion algorithmique, « chambres d'écho » (monologue vs délibération), atomisation."
+    ]},
+    { h: "Citations à ne pas manquer", l: [
+      "**Stœtzel** : *« un ensemble de jugements sur des problèmes actuels auxquels adhère une grande partie d'une société ».*",
+      "**Bourdieu** : *« l'opinion publique n'existe pas ».*",
+      "**Habermas** : l'opinion naît de la **délibération** dans l'espace public."
+    ]},
+    { h: "Question de cours (/8)", p: "**La définition de Stœtzel + les caractéristiques de force diffuse.** Stœtzel : jugement (prise de position) + communication. Force diffuse : **inorganisée**, **mobile**, **anonyme** (l'anonymat fait sa puissance) ; plutôt DES opinions, saisies par leurs vecteurs (presse, sondages, réseaux)." }
+  ]
+},
 
 /* =================================================================
    0 — INTRODUCTION
