@@ -433,9 +433,15 @@
     $("#view-repertoire").style.display = tab === "repertoire" ? "block" : "none";
     $("#view-flashcards").style.display = tab === "flashcards" ? "block" : "none";
     $("#view-fiches").style.display = tab === "fiches" ? "block" : "none";
+    var vq = $("#view-qcm"); if (vq) vq.style.display = tab === "qcm" ? "block" : "none";
+    var vs = $("#view-sujet"); if (vs) vs.style.display = tab === "sujet" ? "block" : "none";
+    if (tab !== "qcm" && window.QCM_VIEW) window.QCM_VIEW.leave();
+    if (tab !== "sujet" && window.SUJET_VIEW) window.SUJET_VIEW.leave();
     if (tab === "repertoire") { renderControls(); renderList(); }
     else if (tab === "fiches") { renderFiches(); }
-    else { backToSetup(); }
+    else if (tab === "qcm") { if (window.QCM_VIEW) window.QCM_VIEW.enter(); }
+    else if (tab === "sujet") { if (window.SUJET_VIEW) window.SUJET_VIEW.enter(); }
+    else if (tab === "flashcards") { backToSetup(); }
     renderStats();
   }
 

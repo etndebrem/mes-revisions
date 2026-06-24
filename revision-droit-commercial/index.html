@@ -17,7 +17,7 @@
   <div class="wrap">
     <a href="../index.html" style="display:inline-block;color:#fff;opacity:.8;text-decoration:none;font-size:.84rem;margin-bottom:6px">← Mes révisions</a>
     <h1>Droit commercial</h1>
-    <p>Répertoire &amp; flashcards — cours de M. de Ravel d'Esclapon (L2) · articles · lois &amp; réformes · jurisprudence · notions</p>
+    <p>Répertoire &amp; flashcards — cours de M. de Ravel d'Esclapon (L2) · notions · lois &amp; réformes · jurisprudence · QCM · sujet blanc</p>
   </div>
 </header>
 
@@ -26,6 +26,8 @@
   <nav class="tabs">
     <button data-tab="repertoire" class="active">📚 Répertoire</button>
     <button data-tab="flashcards">🎴 Flashcards</button>
+    <button data-tab="qcm">📝 QCM</button>
+    <button data-tab="sujet">🎯 Sujet blanc</button>
     <button data-tab="fiches">📄 Fiches</button>
     <button id="reset-progress" class="" style="margin-left:auto" title="Effacer la progression sauvegardée">♻️ Réinitialiser la progression</button>
   </nav>
@@ -55,6 +57,20 @@
     <div id="fc-done" class="fc-done"></div>
   </section>
 
+  <!-- ===== VUE QCM ===== -->
+  <section id="view-qcm" style="display:none">
+    <div id="qcm-setup" class="fc-setup"></div>
+    <div id="qcm-stage" class="qcm-stage" style="display:none"></div>
+    <div id="qcm-done" class="fc-done"></div>
+  </section>
+
+  <!-- ===== VUE SUJET BLANC ===== -->
+  <section id="view-sujet" style="display:none">
+    <div id="sujet-setup" class="fc-setup"></div>
+    <div id="sujet-stage" class="sujet-stage" style="display:none"></div>
+    <div id="sujet-done" class="fc-done"></div>
+  </section>
+
   <!-- ===== VUE FICHES ===== -->
   <section id="view-fiches" style="display:none">
     <div id="fiche-controls" class="controls"></div>
@@ -69,7 +85,10 @@
 
 <script src="data.js"></script>
 <script src="fiches.js"></script>
+<script src="qcm-data.js"></script>
 <script src="app.js"></script>
+<script src="qcm.js"></script>
+<script src="sujet.js"></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('../sw.js').catch(function(){});});}</script>
 </body>
 </html>
